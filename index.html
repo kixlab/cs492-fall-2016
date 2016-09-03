@@ -5,13 +5,15 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Bootstrap Material Design -->
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
   <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
   <style>
     body {
+    	padding-top: 70px;
     	font-weight: normal;
     }
     th {
@@ -21,6 +23,9 @@
 	    font-size: 14px;
 	    padding: 10px;
 	    border: solid 1px lightgrey;
+	}
+	.topic {
+
 	}
 	.reading {
 		max-width: 450px;
@@ -33,6 +38,38 @@
 </head>
 <body>
 	
+
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CS492: Crowdsourcing</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="reading-response.html">Reading Response</a></li>
+        <li><a href="topic-presentation.html">Topic Presentation</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+<!--         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Assignment 1</a></li>
+            <li><a href="#">Assignment 2</a></li>
+            <li><a href="#">Assignment 3</a></li>
+            <li><a href="#">Assignment 4</a></li>
+          </ul>
+        </li> -->
+        <li><a href="final-project.html">Final Project</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
 <div class="container-fluid main">
 	<div class="row">
@@ -91,29 +128,6 @@
 	        </div>        
         </div>
     </div>
-<!-- 	<div class="row">
-		<div class="col-md-12">
-	        <div class="bs-component">
-	          <div class="panel panel-info">
-	            <div class="panel-heading">
-	              <h3 class="panel-title">Course Structure</h3>
-	            </div>
-	            <div class="panel-body">
-	              <p>
-	              Each class will consist of a short introduction of the topic, followed by interactive components, such as student presentations, group discussions, exercises, design activities, and design feedback sessions. You need to bring your laptop to every class. There will be no "lectures".
-	              </p>
-	              <p>
-	              <strong>Prerequites: </strong>There are no official course prerequisites. But assignments and the final project will require building features of a crowdsourcing system, so programming skills are needed. Knowledge or research experience in HCI or social computing is useful, but not required. 
-	              </p>
-	              <p>Activities</p>
-	              <ul>
-	              	<li></li>
-	              </ul>
-	            </div>
-	          </div>         
-	        </div>        
-        </div>
-    </div> -->
 
 	<div class="row">
 		<div class="col-md-12">
@@ -126,7 +140,8 @@
 	              <ul>
 	              	<!-- <li>9/8: First reading responses are due.</li> -->
 	              	<!-- <li>9/6: Presentation sign-up.</li> -->
-	              	<li>9/1: First class. We'll use Piazza for discussion. <a href="https://piazza.com/kaist.ac.kr/fall2016/cs492/home">Please sign up</a>, using your KAIST email address.</li>
+	              	<li>9/3: First reading response is due 9/8 (Thu). Informtion about the reading response and topic presentation is updated.</li>
+	              	<li>9/1: Welcome to the crowdsourcing class! First class. We'll use Piazza for discussion. <a href="https://piazza.com/kaist.ac.kr/fall2016/cs492/home">Please sign up</a>, using your KAIST email address.</li>
 	              </ul>
 	            </div>
 	          </div>         
@@ -161,8 +176,8 @@
 	              	<tr>
 	              		<th>Week</th>
 	              		<th>Date</th>
-	              		<th>Topic</th>
-	              		<th class="reading">Reading</th>
+	              		<th class="topic">Topic</th>
+	              		<th class="reading">Reading <em>(<span class="label label-primary">response</span> indicates a reading response is required for the article.)</em></th>
 	              		<th>Due</th>
 	              	</tr>
               		<tr>
@@ -185,15 +200,22 @@
               			<td>2</td>
               			<td>9/8</td>
               			<td>Crowdsourcing systems, platforms, and workers</td>
-              			<td></td>
+              			<td>(1) <span class="label label-primary">response</span> Ipeirotis, Panagiotis G. <a href="http://dl.acm.org/citation.cfm?id=1869094">"Analyzing the amazon mechanical turk marketplace."</a> XRDS: Crossroads, The ACM Magazine for Students 17.2 (2010): 16-21.<br/>
+              			(2) <span class="label label-primary">response</span> Geiger, David, et al. <a href="http://aisel.aisnet.org/cgi/viewcontent.cgi?article=1396&context=amcis2011_submissions">"Managing the Crowd: Towards a Taxonomy of Crowdsourcing Processes."</a> AMCIS. 2011.<br/>
+              			(3) Vakharia, Donna, and Matthew Lease. <a href="http://arxiv.org/abs/1310.1672">"Beyond AMT: An analysis of crowd work platforms."</a> arXiv preprint arXiv:1310.1672 (2013).
+              			</td>
               			<td></td>
               		</tr>
               		<tr>
               			<td>2</td>
               			<td>9/13</td>
               			<td>Crowdsourcing systems, platforms, and workers</td>
-              			<td></td>
-              			<td></td>
+              			<td>(1) <span class="label label-primary">response</span> Irani, Lilly C., and M. Silberman. <a href="http://dl.acm.org/citation.cfm?id=2470742">"Turkopticon: interrupting worker invisibility in amazon mechanical turk."</a> Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 2013.<br/>
+              			(2) <span class="label label-primary">response</span> Martin, David, et al. <a href="http://dl.acm.org/citation.cfm?id=2531663">"Being a turker."</a> Proceedings of the 17th ACM conference on Computer supported cooperative work & social computing. ACM, 2014.<br/>
+              			(3) Bigham, Jeffrey P. <a href="http://www.cs.cmu.edu/~jbigham/posts/2014/half-workday-as-turker.html">"My MTurk (half) Workday."</a> <br/>
+              			(4) Gray, Mary L., et al. <a href="http://dl.acm.org/citation.cfm?id=2819942">"The crowd is a collaborative network."</a> Proceedings of the 19th ACM Conference on Computer-Supported Cooperative Work & Social Computing. ACM, 2016.
+              			</td>
+              			<td>Assignment 1: Be a crowd worker</td>
               		</tr>
 					<tr>
               			<td>3</td>
@@ -431,7 +453,7 @@
 	        <div class="bs-component">
 	          <div class="panel panel-primary">
 	            <div class="panel-heading">
-	              <h3 class="panel-title">Presentation &amp; Discussion</h3>
+	              <h3 class="panel-title">Topic Presentation</h3>
 	            </div>
 	            <div class="panel-body">
 	              You'll lead the class by summarizing the readings and peer students' critiques, and spurring the in-class discussion.
@@ -461,7 +483,7 @@
 	        <div class="bs-component">
 	          <div class="panel panel-primary">
 	            <div class="panel-heading">
-	              <h3 class="panel-title">Assignment</h3>
+	              <h3 class="panel-title">Assignments</h3>
 	            </div>
 	            <div class="panel-body">
 	            You'll analyze existing crowdsourcing platforms, write about your own experience participating as a crowd worker, and write code to implement crowdsourcing techniques.
@@ -482,6 +504,16 @@
     </div>
 
 </div>
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="dist/js/ripples.min.js"></script>
+<script src="dist/js/material.min.js"></script>
+<script>
+  $(function () {
+    $.material.init();
+  });
+</script>
 
 </body>
 </html>
