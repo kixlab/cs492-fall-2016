@@ -1,22 +1,15 @@
 07 - Quality Control Part 1
 
 # Admin (5 mins)
+- No team yet?
 - Moving 10/4 class as well...
 - Double header on 10/5 evening, slightly shorter
-- No team yet?
-- Third reading changed
 
-# Quality Control
+
+# Quality Control Overview (10-15 mins)
 - What are the ways?
 - More direct, avoiding negatives vs indirect, encouraging positives
 
-# Red Balloon Challenge
-
-# Game Theory
-
-# Input/Output Agreement
-
-# Panos' blogpost
 
 1) it was a competitive environment, where the default
 rationale for the crowd is to be malicious, 
@@ -24,10 +17,13 @@ rationale for the crowd is to be malicious,
 3) workers were given the powerful multi-select, 
 4) there is no worker reputation system such as in AMT
 
-# Activity: Test-driven crowdsourcing design
+# Activity: Test-driven crowdsourcing design (15 mins)
 - For a simple image labeling task?
 - List a few edge cases
 - Given a set of test cases, can you find a mechanism for quality control?
+
+
+# Other types of quality control (5-10 mins)
 
 # Topic Presentation (30 mins)
 
