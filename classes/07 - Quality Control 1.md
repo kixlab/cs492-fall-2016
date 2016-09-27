@@ -4,10 +4,19 @@
 - Moving 10/4 class as well...
 - Double header on 10/5 evening, slightly shorter
 - No team yet?
+- Third reading changed
 
 # Quality Control
 - What are the ways?
 - More direct, avoiding negatives vs indirect, encouraging positives
+
+# Red Balloon Challenge
+
+# Game Theory
+
+# Input/Output Agreement
+
+# Panos' blogpost
 
 1) it was a competitive environment, where the default
 rationale for the crowd is to be malicious, 
