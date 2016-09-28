@@ -32,3 +32,6 @@ rationale for the crowd is to be malicious,
 
 # Reflection
 
+The test case activity worked really well.
+Students enjoyed it, and gave many good answers. 
+High interactivity and participation from normally quite students.
