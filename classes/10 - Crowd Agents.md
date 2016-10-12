@@ -34,13 +34,22 @@ Johnny Cash Project
 - Wizard of Oz
 
 # Legion (5 mins)
-- video
+- video from the paper, didn't end up showing due to time limits
 
 # Twitch Plays Pokemon (5 mins)
-- video
+- YouTube video to illustrate what it's about
 
 
 ===
+
+# Notes
+The drawing game reflection + design activity worked quite well
+- students have experienced the game themselves, so their comments were more to the point and concretely useful.
+
+Crowd agent intro felt quite strong.
+
+===
+
 
 John D. Gould, John Conti, and Todd Hovanyecz. 1983. Composing letters with a simulated listening typewriter. Commun. ACM 26, 4 (April 1983)
 
