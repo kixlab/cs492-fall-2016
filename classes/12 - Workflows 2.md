@@ -13,3 +13,7 @@
 # Storyboard crowdsourcing continues
 - each team continues the design (5 mins)
 - one person becomes a requester and routes work to the students
+
+===
+
+TODO list exercise was a lot of fun, lead to some intresting discussion
