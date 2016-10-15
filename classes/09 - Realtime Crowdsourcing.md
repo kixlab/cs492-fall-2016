@@ -32,3 +32,37 @@ https://admin2.sli.do/event/xf2gfhz6/polls
 - Crowdsourcing application ideas went fine, going over the list with students was fun.
 - Add a follow-up activity of picking a particular example and actually designing a plausible workflow.
 
+
+# Ideas from students using sli.do
+
+Real time making music
+Real time singing
+[SkyNow] Realtime weather information gathering platform (using pictures?)
+Lame joke sharing app
+Realtime sleep monitoring of wave signals of your brain
+Emergency cooking help requests. OMG WHAT DO I DO WITH THIS SAUCE??
+Lying detecting in discussion.
+Realtime sleep monitoring of sleep
+sports betting?
+real-time trafic report
+Realtime sleep monitoring of blood pressure
+choosing the model of a smartphone. A user gives three constraints based on what mobile device he wants to buy: purpose, price constraint, model constraint. Done by : Nurzhan and Yekaterina
+Realtime decision maker (for example, what to eat for dinner)
+Real-time responses broadcasting to celebrities.
+App for deciding lunch menu
+Crowdsourced WOW raiding party
+Map to detect dangerous area like gunfight.
+Realtime cheating system during tests/exams
+Translation
+How do I look right now? Should I wear this shirt or this one?
+Creating a drawn description of a criminal from people who have 3 different backgrounds.
+Making captions for TV programs for the deaf.
+Creating a drawn description of a criminal from people who have 3 different backgrounds.
+Realtime band jamming
+Polling
+Translation that can help conversation with foreigners
+Crowdsourced code programming
+App that fixes bugs on my code
+Recent news
+Coming up with real-time crowdsourcing app ideas
+
