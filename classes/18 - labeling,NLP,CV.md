@@ -46,6 +46,11 @@ http://sind.ai/
 - Slides were overall well received.
 - A bit more interactivity in the earlier part of the slides would have been great.
 
+- Other examples to use:
+https://quickdraw.withgoogle.com/ I think Google's trying to collect different drawings to train their image recognition model... but it's fun! :smile:
+
+https://aiexperiments.withgoogle.com/ more experiments here, it looks like lab in the wild for collecting google's testing & training set
+
 
 - comparison between hierarchical representations of tags
 	- were there any meaningful differences in approaches?
