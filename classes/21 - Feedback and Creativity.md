@@ -8,20 +8,16 @@
 
 # Learnersourcing wrap-up (10 mins)
 
-## Go back to the wall + postits (5 mins)
+## Go back to the wall + postits (7 mins)
 
 
-# Learnersourcing vs Paid Crowdsourcing (5 mins)
+# Learnersourcing vs Paid Crowdsourcing (3 mins)
 - some reflection and wrap-up
 
 
 # Feedback (10 mins)
-
-Peer learning: Peer and Self Assessment in Massive Online Classes
-
-
-# Activity: what kind of feedback does x provide? (5 mins)
-- Duolingo?
+- can the crowd give feedback?
+- can the crowd improve with feedback?
 
 
 # Creativity (10 mins)
@@ -32,7 +28,17 @@ Peer learning: Peer and Self Assessment in Massive Online Classes
 ===
 
 # Notes
+A little bit time-pressed
+No time for activity
+Students were feeling a bit tired. Not sure if it's the material or semester timeline.
 
-# The learnersourcing activity by Yoo Jin
+
+## The learnersourcing activity by Yoo Jin
 - not necessary because she posted a Piazza post about it.
 
+## Feedback Activity: what kind of feedback does x provide? (5 mins)
+- Duolingo?
+
+## Shepherding paper
+	- I need to better understand the difference between self and external conditions
+	- whether there actually was a difference
