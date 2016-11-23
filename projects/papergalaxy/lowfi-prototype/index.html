@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h2 id="milestone-4-report">Milestone 4 Report</h2>
+<h3 id="team-kimchosun">Team KimChoSun</h3>
+<h4 id="problem-statement">Problem Statement</h4>
+<p>Our system aims to create a semantic network of academic papers that represents how papers are related to one another with data provided by academic paper readers themselves.</p>
+<h4 id="tasks">Tasks</h4>
+<p>Users want a platform that can guide his/her through his/her paper finding process. Crowds voluntarily connect papers. Authors add their paper on the platform making connections to other papers.</p>
+<h4 id="prototyping-tool">Prototyping tool</h4>
+<p>We used Invision because one of our teammate had some experience with the tool. Its simple UI made it easy to get used to the tool at first. However, it does not provide features for drawing a new item on the prototype or editing a item. We had to create our image file in other programs, export them, and upload them on Invision to add to the prototype. Editing had to go through the same step as well. It provides only ‘Click’ and ‘Hover’ actions and not typing, dragging, or others.</p>
+<h4 id="design-choices">Design choices</h4>
+<ul>
+<li>We did not implement the Sign up page because we thought this is not our system’s main feature, while it is very burdensome to create it with Invision.</li>
+<li>We have upvote and downvote features for our labels on edges but implemented only one upvote case because implementing all of them meant hundreds of more, manually generated images.</li>
+<li>The graph in the main page was replaced with a static image because it was hard to make graphics of interactive graph map.</li>
+<li>Scores in dashboards are fake data. No one has used our platforms, so there is no choice but to make data by ourselves.</li>
+<li>Only limited number of papers and edges are clickable and shows information. We thought it is enough to enlighten users.</li>
+<li>Writing a word in search box is not allowed. Invision doesn’t support texting feature.</li>
+<li>There is only one badge. We thought the number of badges isn’t important for rapid prototyping.</li>
+<li>There are only three relation categories. We haven’t discussed how many relation categories we will provide for users. These will be decided when we actually implement the platform.</li>
+<li>There is no such user called ‘Sun’. We made him to show how profile page and dashboards are organized.</li>
+</ul>
+<h4 id="representative-screenshots">Representative screenshots</h4>
+<p><strong>Main Page</strong> <img src="img/mainPage.png" title="Main Page" alt="alt Mainpage" /></p>
+<p><strong>Search results page</strong> <img src="img/yesResult.png" title="Yes Result" alt="alt yesResult" /></p>
+<p><strong>Adding new academic paper into database</strong> <img src="img/addPaper.png" title="Add Paper" alt="alt addPaper" /></p>
+<p><strong>Showing the relationship between two papers</strong> <img src="img/edgeinfo.png" title="Edge Info" alt="alt edgeinfo" /></p>
+<p><strong>Profile</strong> <img src="img/profile.png" title="Profile" alt="alt profile" /></p>
+<p><strong>Scoreboard</strong> <img src="img/score.png" title="Score" alt="alt score" /></p>
+<h4 id="instructions">Instructions</h4>
+<p><a href="https://invis.io/HP9A3927Z">Link</a></p>
+<p><em>Following instructions exclude duplicate actions, such as functions of buttons in the header.</em></p>
+<p><strong>In the Main Page</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on ‘Login’ -&gt; Login Page</li>
+<li>Click on ‘Search Button’ without anything in the search box -&gt; No Results Page</li>
+<li>Click on ‘Search Box’ and then ‘Search Button’ -&gt; Search Result Page</li>
+</ol>
+<p><strong>In the No Results Page</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on ‘ADD NEW PAPER’ -&gt; Add a New Paper Page 1</li>
+</ol>
+<p><strong>In the Add a New Paper Page 1</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on ‘CANCEL’ -&gt; back to the previous page</li>
+<li>Click on ‘ADD’ -&gt; Search Result Page</li>
+</ol>
+<p><strong>In the Search Result Page</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on ‘+’ button -&gt; shows click on ‘NEW PAPER’ button and ‘NEW CONNECTION’ button</li>
+<li>Click on ‘NEW PAPER’ -&gt; Add a New Paper Page 2</li>
+<li>Click on ‘NEW CONNECTION’ -&gt; Add a New Connection Page</li>
+<li>Click on the central node in pink -&gt; Paper Information Page</li>
+<li>Click on the green edge (not present at first, appears when new paper is added) -&gt; Edge Information Page</li>
+</ol>
+<p><strong>In the Add a New Paper Page 2</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on ‘ADD’ -&gt; Search Result Page with one more node added (only once)</li>
+<li>Click on ‘CANCEL’ -&gt; Back to the previous page</li>
+</ol>
+<p><strong>In the Add a New Connection Page</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on ‘ADD’ -&gt; Search Result Page with the green edge added (only once)</li>
+<li>Click on ‘CANCEL’ -&gt; Back to the previous page</li>
+</ol>
+<p><strong>In the Login Page</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on ‘LOGIN’ -&gt; Profile Page</li>
+</ol>
+<p><strong>In the Profile Page</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on ‘Logout’ -&gt; Main Page</li>
+<li>Click on ‘Compare with your friends!’ -&gt; Leaderboard Page</li>
+<li>Click on points stat in the header -&gt; Leaderboard Page</li>
+<li>Click on profile picture and name in the header -&gt; Profile Page</li>
+</ol>
+<p><strong>In the Leaderboard Page</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click on the ‘Select Category Box’ -&gt; opens the category list of fields in computer science</li>
+</ol>
+<h4 id="user-feedback">User feedback</h4>
+<ul>
+<li>I’m lost in the middle of the platform. I want a navigation bar to find out which page I’m currently in.</li>
+<li>I don’t like to scroll on the main page. I hope all the contents are visible at once on the screen.</li>
+<li>The data visualization part is not scalable. If the number of connections increases, undirected graph will get messier.</li>
+<li>I’m not sure how the scores are given. We need more specific instructions that explains how and when I get the point.</li>
+<li>You need more strong argument to support the idea that making more connections on the system gives benefits to the authors, and thereby motivation for them to work.</li>
+<li>Instead of showing just connections among papers, having a paper preview/reading platform alongside will make the system more natural in user involvement so that users can make connections while reading a paper.</li>
+<li>The system assumes that the users are fully aware of academic papers they have read so far.</li>
+<li>Differentiating stronger/weaker relationships between papers will be more effective. Add color transparency or distance between two nodes (length of edge) as a display method of relationship strength.</li>
+<li>In the Main Page, it would be better if clicking on the auto-completed/suggested title in the search box leads directly to the Search Result Page.</li>
+<li>I have no idea what is the meaning of the graphs in the main page. It needs some indicators to explain about it.</li>
+<li>Even though there is ranking system to encourage workers, I think motivation is weak. It should have more powerful motivation.</li>
+</ul>
+</body>
+</html>

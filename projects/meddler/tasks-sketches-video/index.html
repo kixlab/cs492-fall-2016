@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="requirement-elicitation-story">Requirement Elicitation &amp; Story</h1>
+<p>CS492 Crowdsourcing - Final Project: <strong>Milestone 2</strong> (2016-10-13)</p>
+<ul>
+<li>20165192 Sunggeun Ahn (topmaze@kaist.ac.kr)</li>
+<li>20165161 Young-Min Baek (ymbaek@se.kaist.ac.kr)</li>
+<li>20163703 Sungjae Hong (yain@kaist.ac.kr)</li>
+</ul>
+<hr />
+<h2 id="a.-task-definition">A. Task Definition</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Name of platform: <strong><em>1-Day-N-Questions</em></strong> (N can be an arbitrary number)</p>
+<p>Our platform utilizes crowdsourcing technique to address issues of the fairness of education. Our main goal is to offer equal opportunity to learners based on crowdsourced knowledge. Our system basically supports learners just like a <em>study-group system</em>. More specifically, Every user can be both a requester and a worker, and each user receive help from (or offer help to) other users over our platform. The users can benefit from not only <em>sharing their customized problems</em>, but also <em>managing their own learning history</em>. Lastly, for the sake of implementation-level simplicity, we only focus on English-related problems, such as English words, phrases, and sentences.</p>
+<div class="figure">
+<img src="images/figure1.png" width="800" />
+
+</div>
+<p>.................................................................................................................................</p>
+<h3 id="task-1.-making-a-new-problem">Task 1. Making a New Problem</h3>
+<h5 id="about-task-1">About Task 1:</h5>
+<p>In order to get answers of a given problem, the first thing we have to do is <em>to make (or write) a new problem</em>. For an easy process of problem making, a specific type of question should be defined by our platform and intuitive user interface should also be provided. Our platform mainly supports English-related problems and each problem can be easily customized by a problem provider. Afterwards, the written problem is released to unspecified learners (crowds) through our platform, and those who receive the problem will try to solve it [<em>Task 2</em>].</p>
+<p>For example, <em>Young-Min (28, male)</em>, who is a normal university student, was memorizing English words, and he found a word that he did not know (or a sentence that he could not translate). He wants to memorize the word and share the word with his study group. He opens our 1DNQ application on his smartphone to make a new question. He writes a question &quot;<em>What is the meaning of this word?</em>&quot; and writes following statement &quot;<em>intrinsic</em>.&quot; For the new question, he fill out expected answers of the question, &quot;<em>고유한</em>&quot;, &quot;<em>본질적인</em>&quot;, and related tags and hints &quot;<em>adjective</em>&quot;, &quot;<em>antonym-extrinsic</em>.&quot; He sets a time limit of '20 secs' and he finally submits the new question to the server. This process makes <em>Young-Min</em> a question maker.</p>
+<h5 id="requirements">Requirements:</h5>
+<ul>
+<li><strong>Requirement 1-A: A system must provide a submission form for a user to fill out or customize</strong>
+<ul>
+<li>A submission form contains: (1) A question, (2) following statement/selection, (3) expected answers, (4) tags related to the question, (5) hints, (6) a textbox for extra description/help, (7) a time limit, (8) a submission button, and (9) an initialization button.</li>
+<li>Tags can be used as hints of the answer, so inserting tags is not mandatory.
+<ul>
+<li>Examples of classes: Noun(+Pronoun), Verb, Adjective, Adverb, etc.</li>
+<li>Examples of types: Living things, Nonliving things, Abstract, etc.</li>
+<li>Examples of hints: Flower, Korea, etc.</li>
+</ul></li>
+<li>When a question maker submits the written problem, our system must save the data into the database and categorize it.
+<ul>
+<li>Using the data of a new question, our system should classify the question automatically. The classified questions will be transferred to proper groups of users.</li>
+</ul></li>
+</ul></li>
+<li><strong>Requirement 1-B: Each problem (question) has to contain a time limit defined by a question maker</strong>
+<ul>
+<li>In order to test whether other users know the answer or not without cheating, the time limit is used.
+<ul>
+<li>For example, <em>Young-Min (28, male)</em>, who found a word that he didn't know, is now making a new question about the word. He thought that the meaning of the word can be easily guessed through the form of the word. So, he set the time limit of only '<em>15secs</em>' that is allowed time to solve his question.</li>
+</ul></li>
+<li>A time limit cannot exceed 2 minutes.
+<ul>
+<li>In order to reduce the complexity of questions, our platform puts a limitation on problem-solving time. Even for a difficult Enlgish sentence, 2 minutes of time is enough to judge whether a user knows the answer or not.</li>
+</ul></li>
+</ul></li>
+<li><strong>Requirement 1-C: A system must check redundancy of written problems and filter out them in real-time</strong>
+<ul>
+<li>Our system should analyze the written question and following statement/selection with its expected answers and compare them with the stored data in DB.
+<ul>
+<li>If there are many redundant questions in DB,</li>
+</ul></li>
+<li>If a word is found in DB, but not found in question-maker's word book, the new question is simply stored in his or her word book DB.</li>
+<li>If an already existing word is found in question-maker's word book, a popup message box should be shown to the question maker immediately.
+<ul>
+<li>Message: &quot;The word that you just wrote was already in your word book. Do you want to update your word book?&quot;<br />
+</li>
+<li>Response: [Update the existing data], [Cancel]</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>.................................................................................................................................</p>
+<h3 id="task-2.-solving-and-evaluating-problems">Task 2. Solving and Evaluating Problems</h3>
+<h5 id="about-task-2">About Task 2:</h5>
+<p>In order to solve problems, the system should let the other users receive the problems first. For the ease of use, this process should be automatically done by the system. For example, an alarm system can be one possible approach for this sub-task. After the receive, the system should provide an interface for solve the problems. The interface should be simple and the process must not demand much typing because the system is mobile-based. Lastly, the system should give the users a way to evaluate the given problems.</p>
+<p>For example, <em>Sungjae (25, Male)</em>, who is an university student, is on the train and finding anything to play. Then, his smartphone buzzes, noticing there is a problem sent from a platform. He finds pop-up button on his smartphone screen and click it. The application shows a problem on the screen: <em>What is the meaning of word? 'intrinsic'</em> and before time runs out, Sungjae remembers that intrinsic means &quot;<em>고유한</em>&quot; and clicks check button to confirm the answer. After the click, the answers, &quot;<em>고유한</em>&quot; and &quot;<em>본질적인</em>&quot; are displayed on the screen and Sungjae finds that he is right. After then, he clicks the &quot;Right&quot; button among three buttons - &quot;<em>Right</em>&quot;, &quot;<em>Wrong</em>&quot;, and &quot;<em>I Don't Know</em>&quot; - and also evaluate sthe level of difficulty of the problem, by clicking &quot;Normal&quot; button among three buttons for difficulty of the problem: &quot;<em>Easy</em>&quot;, &quot;<em>Normal</em>&quot;, and &quot;<em>Hard</em>&quot;. This process enables Sungjae to receive, solve and evaluate a problem.</p>
+<h5 id="requirements-1">Requirements:</h5>
+<ul>
+<li><strong>Requirement 2-A: A system must provide an automatic process for users to receive problems</strong>
+<ul>
+<li>An alarm will go to an user if the user receives a problem
+<ul>
+<li>Number of alarms(problems) an user receives can be controlled by itself</li>
+<li>Pushing a popped box on a mobile device screen lets an user to start a system and see a received problem</li>
+</ul></li>
+<li>For an active user who wants to study more, a system should provides a button in a system to receive a problem</li>
+</ul></li>
+<li><strong>Requirement 2-B: A system must provide a simple interface and process for users to solve problems</strong>
+<ul>
+<li>Single problem, without an answer, is shown to an user after receiving it
+<ul>
+<li>A button to check the answer is provided for further process</li>
+<li>Time until pushing the button is recorded to collect time to solve a problem
+<ul>
+<li>The record will be used to evaluate the user and the grouping of users to aggreate them with similar English skill level</li>
+</ul></li>
+<li>If time set by a problem maker is over, the answer will be automatically checked</li>
+</ul></li>
+<li>After pushing the button, the answer will be shown to an user
+<ul>
+<li>Three buttons (&quot;Right&quot; &quot;Wrong&quot; &quot;I Don't Know&quot;) are provided to evaluate an user itself
+<ul>
+<li>If an user comes to this step after the timeout, &quot;I Don't Know&quot; button will be automatically pushed</li>
+</ul></li>
+<li>Similarly, whether an user is right or wrong, or doesn't know the answer will be recorded
+<ul>
+<li>The record will be used to evaluate the user and the grouping of users to aggreate them with similar English skill level</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><strong>Requirement 2-C: A system should give the users a way to evaluate the given problems</strong>
+<ul>
+<li>Three buttons(&quot;Easy&quot; &quot;Normal&quot; &quot;Hard&quot;) are given to users to evaluate a problem after a solving process
+<ul>
+<li>The evaluation will be collected by a system to evaluate a problem and to evaluate an user who solves a problem
+<ul>
+<li>This will be used to evaluate the user and the grouping of users to aggreate them with similar English skill level</li>
+<li>If the problem is evaluated as easy one, the problem will be not included in the problem database of the user</li>
+<li>This feedback on the problem also can be sent to the problem maker to provide a better problem</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>.................................................................................................................................</p>
+<h3 id="task-3.-checking-users-own-record-for-learning-improvement">Task 3. Checking User's Own Record for Learning Improvement</h3>
+<h5 id="about-task-3">About Task 3:</h5>
+<p>A learner need learning record to estimate academic achievements, to schedule study plan, and, to motivate his/her learning. For example, Mr. kim, who is a 18 years old high school student. He take a english quiz in last week and get a result in this day. His score is fine, but he take off points at questions about adjective. He is disappointed with the results, because he got a perfect score at questions about adjective in the previous quiz. So he want to know his achievement level for preparing each upcoming quizs or exams.</p>
+<h5 id="requirements-2">Requirements:</h5>
+<ul>
+<li><strong>Requirement 3-A: Record must include a improvement history</strong>
+<ul>
+<li>Learning history can provide a information about the effort of learning. However if there are no information about the achievement level, a learner shouldn't convince result of learning, therefore, record must include history of improvement to determining current status of learning.
+<ul>
+<li>Learning history should be make easy to interpret: visualization</li>
+<li>Learning history should be make easy to access: shown at main page, floating button, etc</li>
+<li>Learning history should be show recent achievement level: result of recent &quot;some duration&quot;</li>
+</ul></li>
+</ul></li>
+<li><strong>Requirement 3-B: Record must provide a distinctive dimensions of learning status</strong>
+<ul>
+<li>To schedule a learning plan, a user must know strength point and weakness point of own achievement level. Tags, described in the Task 1, can be a distinctive dimensions for achievement level.
+<ul>
+<li>Dimensions should reflect context of learning: if a user learning for traveling, dimensions may distinguished by traveling context</li>
+<li>A number of dimensions should be suitable to use: if there are too much dimensions, users hard to interpret a record. In otherwords, if there are too less dimensions, dimensions may be useless.</li>
+</ul></li>
+</ul></li>
+<li><strong>Requirement 3-C: A system must provide a alert for unbalance learning</strong>
+<ul>
+<li>Learners sometimes only study about the interesting or about the weakpoint. System can monitor those behavior from learning history. Therefore, system must provide a alert to induce balanced learning.
+<ul>
+<li>Alert should be strongly noticeable.</li>
+<li>Alert should be reflect a slope of improvement history: improvement is not necessarily proportional to learning time</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="b.-sketches">B. Sketches</h2>
+<p>If the images are not displayed, please check the images in the browser.</p>
+<ul>
+<li>Task 1: images/01-small.jpg</li>
+<li>Task 2: images/02-small.jpg</li>
+<li>Task 3: images/03-small.jpg</li>
+</ul>
+<h3 id="task-1.-making-a-new-problem-1">Task 1. Making a New Problem</h3>
+<div class="figure">
+<img src="images/01-small.jpg" />
+
+</div>
+<h3 id="task-2.-solving-and-evaluating-problems-1">Task 2. Solving and Evaluating Problems</h3>
+<div class="figure">
+<img src="images/02-small.jpg" />
+
+</div>
+<h3 id="task-3.-checking-users-own-record-for-learning-improvement-1">Task 3. Checking User's Own Record for Learning Improvement</h3>
+<div class="figure">
+<img src="images/03-small.jpg" />
+
+</div>
+<hr />
+<h2 id="c.-video">C. Video</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1-lxBcrYE8w" frameborder="0" allowfullscreen></iframe>
+<p>Video is uploaded on Youtube (<a href="https://www.youtube.com/watch?v=1-lxBcrYE8w" class="uri">https://www.youtube.com/watch?v=1-lxBcrYE8w</a>)</p>
+<hr />
+</body>
+</html>

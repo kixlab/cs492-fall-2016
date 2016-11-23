@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<p>CS492 Crowdsourcing - Final Project: <strong>Milestone 1</strong> (2016-10-05)</p>
+<ul>
+<li>20165192 Sunggeun Ahn (topmaze@kaist.ac.kr)</li>
+<li>20165161 Young-Min Baek (ymbaek@se.kaist.ac.kr)</li>
+<li>20163703 Sungjae Hong (yain@kaist.ac.kr)</li>
+</ul>
+<hr />
+<h1 id="problem-identification-and-ideas">Problem Identification and Ideas</h1>
+<h2 id="a.-problem-identification">A. Problem Identification</h2>
+<h3 id="problem-statement">PROBLEM STATEMENT</h3>
+<h4 id="what-is-the-problem-our-team-is-trying-to-solve">What is the problem our team is trying to solve?</h4>
+<ul>
+<li><strong>Problem</strong>: Unfair and ineffective environment for learning and education</li>
+<li><strong>Goal</strong>: Fair opportunity of effective education using crowdsourcing</li>
+</ul>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761390341/2016-10-06-images---cs492-new/01.png" />
+
+</div>
+<p>　</p>
+<h4 id="how-do-we-know-this-problem-exists">How do we know this problem exists?</h4>
+<ul>
+<li>Unfair opportunity and environment can lead to the difference in the level of education.</li>
+<li>Purchasing learning materials and registering courses have costs.</li>
+<li>Existing learning materials are tedious for continuing study.</li>
+<li>Fixed question (problem) pools of usual textbooks, workbooks, online-learning services have limitations in diversity and creativity.</li>
+</ul>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761402282/2016-10-06-images---cs492-new/02.png" />
+
+</div>
+<ul>
+<li>According to the survey of <em>Statistical Office of Korea</em></li>
+<li>Private education costs increase as household income increases.</li>
+<li>Regional differences cause differntials of private education costs.</li>
+</ul>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761410979/2016-10-06-images---cs492-new/03.png" />
+
+</div>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761418096/2016-10-06-images---cs492-new/04.png" />
+
+</div>
+<p>(통계청 보도자료(A Report of National Statistical Office), &quot;2015년 초·중·고 사교육비조사 결과(Private Education Costs of Korean Elementary, Middle, and High School Students in 2015),” 2016)</p>
+<ul>
+<li>Based on our personal experience,</li>
+<li><em>&quot;When I was a tutor for children, I could observe that there are a lot of difficulties for <strong>underperivileged students to study equally</strong> with other students.&quot;</em> (Sunggeun Ahn, 2008)</li>
+<li><em>&quot;There are many people who want to learn new things at a later age than others. For example, my parents want to study Chinese or English, or some elderly people can start learning programming. However, if they <strong>missed the right time to get the education</strong>, the way to study has a high entrance level (or barrier).&quot;</em> (Sungjae, Young-Min)</li>
+</ul>
+<p>　</p>
+<h3 id="crowdsourced-approach">CROWDSOURCED APPROACH</h3>
+<h4 id="why-do-we-use-crowdsourcing-for-the-problem">Why do we use crowdsourcing for the problem?</h4>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761433629/2016-10-06-images---cs492-new/05.png" />
+
+</div>
+<h3 id="challenges">CHALLENGES</h3>
+<h4 id="challenges-of-a-crowdsourced-learning-system">Challenges of a crowdsourced learning system</h4>
+<ol style="list-style-type: decimal">
+<li><em>[Motivation]</em> How might we motivate voluntary learners to study something using our platform?</li>
+<li><em>[Motivation]</em> How might we make people (workers or requesters) write test questions (i.e., problems) voluntarily?</li>
+<li><em>[Quality control]</em> How might we guarantee the quality of test questions which were made by voluntary workers?</li>
+<li><em>[Diffilculty control]</em> How might we identify and provide a proper level of problems for each learner?</li>
+<li><em>[Pool generation]</em> How might we effectively recruit people who want to study at first?</li>
+<li><em>[Quality control]</em> How might we handle (filter out) wrong information?</li>
+</ol>
+<ul>
+<li>Wrong problems made by workers</li>
+<li>Spam problems/answers/messages by advertisers or saboteurs</li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li><em>[Environment/Interface]</em> How might we guarantee &quot;Quality Learning Service&quot; for requesters and workers?</li>
+</ol>
+<ul>
+<li>Ease to use: How might we make our interface intuitive and simple?</li>
+<li>Mobility: How might we build our platform that can be accessed and used anywhere?</li>
+<li>Fun/Enjoyment: How might we give pleasure to learners without any obstacle?</li>
+<li>Sustainability: How might not we make our service boring? How might we effectively maintain already existing users?</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li><em>[Aggregation]</em> How might we utilize the aggregated learning data for the better learning for next time (or next cycle)?</li>
+<li><em>[Copyright]</em> How might we deal with copyright issues of the user-provided learning materials (i.e., problems, questions, and solutions)?</li>
+</ol>
+<ul>
+<li>If a problem provider makes a test question using existing textbooks</li>
+</ul>
+<ol start="10" style="list-style-type: decimal">
+<li><em>[Responsiveness]</em> How might we control the response time?</li>
+</ol>
+<ul>
+<li>What is an appropriate interval for pushing messages with problems?</li>
+<li>When do we have to aggregate submitted data (questions and answers) from users?</li>
+</ul>
+<p>　</p>
+<h2 id="b.-ideas-solutions">B. Ideas &amp; Solutions</h2>
+<h3 id="idea-1-crowdsourced-exam-evaluation">IDEA 1: <em>CROWDSOURCED EXAM EVALUATION</em></h3>
+<h4 id="summary-of-the-idea">Summary of the idea</h4>
+<ul>
+<li><strong><em>To estimate the levels of difficulty of exam, request evaluation to learner crowd</em></strong></li>
+</ul>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761442353/2016-10-06-images---cs492-new/06.png" />
+
+</div>
+<h4 id="a-scenario-from-the-requesters-point-of-view">A scenario from the requester's point of view</h4>
+<ul>
+<li>Requesters join with basic informations
+<ul>
+<li>What's your Job?
+<ul>
+<li>teacher, part-time private tutor, workbook maker</li>
+</ul></li>
+<li>Why you need problem evaluation? (Enable multiple choice)
+<ul>
+<li>to set exam questions, to delvelop good learning materials</li>
+</ul></li>
+<li>Who's the target student? (Enable multiple choice)
+<ul>
+<li>middle school, high school</li>
+</ul></li>
+<li>What's the target subject? (Enable multiple choice)
+<ul>
+<li>English, math, science, etc.</li>
+</ul></li>
+</ul></li>
+<li>Request process
+<ul>
+<li>Take <strong>a problem image</strong> with their smartphone camera
+<ul>
+<li>The image only include one problem</li>
+</ul></li>
+<li>Upload a image</li>
+<li>Insert problem information
+<ul>
+<li>is it objective problem?
+<ul>
+<li>currently, we may support objective problem only.</li>
+</ul></li>
+<li>number of answer</li>
+<li>number of correct answer</li>
+<li>self estimation of level of difficulty (1-5 likert scale)<br />
+</li>
+</ul></li>
+<li>Set a correct answer</li>
+<li>Select target student</li>
+<li>Select subject category</li>
+<li>Set a deadline</li>
+</ul></li>
+<li>Get results of a single request
+<ul>
+<li>Worker's information
+<ul>
+<li>distribution of age, job, academic abillity<br />
+</li>
+</ul></li>
+<li>Statistical results: mean, median, standard deviation
+<ul>
+<li><strong>quantitative factors</strong>: error rate, completion time</li>
+<li><strong>qualitative factors</strong>: subjective difficulty, subjective annoyingness</li>
+</ul></li>
+<li>A requester can see filtered result
+<ul>
+<li>ex: resutls of 'job: middle school student' 'academic ability: level 3'</li>
+</ul></li>
+<li>Distribution of answers (ex: no.1 - 30%, no.2 - 20%, no.3 - 50%)</li>
+<li>Check workers comment
+<ul>
+<li>if there are good comment, a requester can give a point to worker<br />
+</li>
+</ul></li>
+</ul></li>
+<li>Combine the results of problem set
+<ul>
+<li>Select a set of evaluated problems</li>
+<li>Set a academic level of requesters students
+<ul>
+<li>ex: level 1 - 30%, level 2 - 60%, level 3 - 10%)</li>
+</ul></li>
+<li>Get a estimated results of exam
+<ul>
+<li>Mean, median, standard deviation</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="a-scenario-from-the-workers-point-of-view">A scenario from the worker's point of view</h4>
+<ul>
+<li>How do workers come into our platform?
+<ul>
+<li>Keywords for accessing our platform
+<ul>
+<li>Mobile study application</li>
+<li>Free problems for study</li>
+</ul></li>
+<li>Workers join with basic informations
+<ul>
+<li>What's your Job?
+<ul>
+<li>elementary/middle/high school student, etc.</li>
+</ul></li>
+<li>How old are you?</li>
+</ul></li>
+<li>Workers should select the target subject
+<ul>
+<li>to select the target subject, workers must take a simple test for estimating acamemic ability</li>
+<li>also, a worker can receive requests only about the selected subjects.</li>
+</ul></li>
+</ul></li>
+<li>Receiving a request
+<ul>
+<li>Passive receiving
+<ul>
+<li>If a worker set enable to get a push alarm, he/she can get push alarm for evaluation request</li>
+<li>A worker can access a problem by clicking recieved push alarm.</li>
+<li>Also, a worker can set a recieving period and time</li>
+</ul></li>
+<li>Active receiving
+<ul>
+<li>A worker can access a request by clicking &quot;receive button&quot; on the list of target subject</li>
+</ul></li>
+</ul></li>
+<li>Evaluating a problem
+<ul>
+<li>Solve a problem</li>
+<li>Evaluate a level of
+<ul>
+<li>Difficulty, Annoyingness, Quality</li>
+</ul></li>
+<li>Comment to requester (if a worker want)</li>
+</ul></li>
+<li>Checking current status
+<ul>
+<li>Solving history
+<ul>
+<li>answered problems, number of solving, error rate</li>
+</ul></li>
+<li>Current level of academic ability
+<ul>
+<li>level of academic ability is refleshed when a worker solve a problem</li>
+<li>academic ability is evaluated on each subjects</li>
+</ul></li>
+<li>Point
+<ul>
+<li>point is achieved for every work</li>
+<li>Also a worker can recieve point from his/her comment</li>
+</ul></li>
+</ul></li>
+<li>Reward
+<ul>
+<li>A set of high quality problems
+<ul>
+<li>a worker can use point for getting a set of high quality problems in document format</li>
+<li>Level of quality is evaluated from other workers evaluation</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="dimension-analysis">7-Dimension Analysis</h4>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475762009073/2016-10-06-images---cs492-new/21.png" />
+
+</div>
+<p>　</p>
+<hr />
+<h3 id="idea-2-forum-like-cyber-platform">IDEA 2: <em>FORUM-LIKE CYBER PLATFORM</em></h3>
+<h4 id="summary-of-the-idea-1">Summary of the idea</h4>
+<ul>
+<li><strong><em>Providing forum-like cyber platform to help translation of an English sentence</em></strong></li>
+</ul>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761457612/2016-10-06-images---cs492-new/08.png" />
+
+</div>
+<h4 id="a-scenario-from-the-requesters-point-of-view-1">A scenario from the requester's point of view</h4>
+<h5 id="a.-creat-a-task">A. Creat a task</h5>
+<ul>
+<li>A requester uses a smart device to login to the platform.</li>
+<li>When a requester logs-in, he or she needs to choose the best translation from the given translations of a certain English sentence, which is one of other requests in the platform.</li>
+<li>Choice of the sentence is based on the number of evaluations; if the request on the sentence was given a long time ago and small amount of evaluations are done, the sentence is more likely to be shown.</li>
+<li>In the validation phase, a requester can ‘Report’ translation for malign action and duplication. If the number of reports come to the certain translation, it will be deleted.</li>
+<li>After log-in, a requester can push ‘Create’ button to submit a new sentence to be translated. He or she can choose a duration of the request, maximum to 2~3 days.</li>
+</ul>
+<h5 id="b.-review-results">B. Review results</h5>
+<ul>
+<li>A requester can see a bulletin board-style structure after submitting a request.</li>
+<li>Each post shows translations of a requested sentence, sorted with the number of recommendations for each translation with the status of a translator, which shows how this translator (worker) translates well.</li>
+</ul>
+<h5 id="c.-end-the-task">C. End the task</h5>
+<ul>
+<li>A requester can choose one (or more) translation, then translators will get some points.</li>
+<li>A requester can give a rating to the chosen translation (or a total service)</li>
+</ul>
+<h4 id="a-scenario-from-the-workers-point-of-view-1">A scenario from the worker's point of view</h4>
+<h5 id="a.-come-into-the-system">A. Come into the system</h5>
+<ul>
+<li>A user of the platform can be both a requester and a worker. Thus, the way to start the system is same as that of a requester.</li>
+</ul>
+<h5 id="b.-task-experience">B. Task experience</h5>
+<ul>
+<li>Click ‘Translate’ button after the log-on. Then a sentence will be given for the translation.</li>
+<li>If a worker wants to translate, click ‘That’s my work’ and suggest a translation. Otherwise, click ‘Pass’ button to find other sentences.</li>
+</ul>
+<h5 id="c.-motivation">C. Motivation</h5>
+<ul>
+<li>Any kinds of rewards: reputation system, badges, titles, etc.</li>
+<li>Workers also can improve English skills by doing other ones’ translation.</li>
+</ul>
+<h4 id="dimension-analysis-1">7-Dimension Analysis</h4>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761593117/2016-10-06-images---cs492-new/19.png" />
+
+</div>
+<p>　</p>
+<hr />
+<h3 id="idea-3-1-day-10-questions">IDEA 3: <em>1 DAY 10 QUESTIONS</em></h3>
+<h4 id="summary-of-the-idea-2">Summary of the idea</h4>
+<ul>
+<li><strong><em>“My curiosity can be a new study material (problem) for others.”</em></strong></li>
+<li>Sharing and collaborating the learning experience &amp; progress with other learners who have the same educational interest.</li>
+</ul>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761464943/2016-10-06-images---cs492-new/09.png" />
+
+</div>
+<h4 id="a-scenario-from-the-requesters-point-of-view-2">A scenario from the requester's point of view</h4>
+<h5 id="a.-join-our-platform-and-select-a-study-topic-of-interest">A. Join our platform and select a study topic of interest</h5>
+<ul>
+<li>Every learner can freely sign up for a membership of the platform.</li>
+<li>Before getting started, a user has to select some of his or her study topic (e.g., English, Chinese, programming) to easily find people with same interests.</li>
+</ul>
+<h5 id="b.-write-a-simple-test-question">B. Write a simple test question</h5>
+<ul>
+<li>A requester who wants to share a problem that will help others can upload a new test question to our platform.</li>
+<li>The interface allows a simple and basic form to make a test question to make problems solvable within a short time.</li>
+</ul>
+<h5 id="c.-mark-submitted-answer">C. Mark submitted answer</h5>
+<ul>
+<li>After the time period is up, a requester can receive the aggregated answers written by other people who had got the requester’s problem.</li>
+<li>As a requester knows the correct answer (solution), the submitted answers can be marked.</li>
+</ul>
+<h5 id="d.-manage-own-reputation">D. Manage own reputation</h5>
+<ul>
+<li>A requester can be an online teacher if his or her questions get good quality ratings on average. It can be used as a reputation.</li>
+<li>A requester can be added to other learners’ Favorites list.</li>
+</ul>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761515699/2016-10-06-images---cs492-new/14.png" />
+
+</div>
+<h4 id="a-scenario-from-the-workers-point-of-view-2">A scenario from the worker's point of view</h4>
+<h5 id="a.-join-our-platform-and-select-a-study-topic-of-interest-1">A. Join our platform and select a study topic of interest</h5>
+<ul>
+<li>Same as requesters</li>
+</ul>
+<h5 id="b.-receive-arbitrary-questions-from-other-people">B. Receive arbitrary questions from other people</h5>
+<ul>
+<li>A worker receives 3~10 push messages with simple test questions of registered interest.</li>
+</ul>
+<h5 id="c.-check-the-test-question-and-solve-it">C. Check the test question and solve it</h5>
+<ul>
+<li>A worker has to solve the given problem within the time allowed.</li>
+<li>A worker can fill in the blanks with an answer and submit it.</li>
+</ul>
+<h5 id="d.-rate-stars-for-the-question-optional">D. Rate stars for the question (optional)</h5>
+<ul>
+<li>A worker can rate stars for the given question, and it will be reflected on the question provider’s reputation</li>
+</ul>
+<h5 id="e.-check-my-past-history">E. Check my past history</h5>
+<ul>
+<li>Every learner has his or her own study history to look up.</li>
+<li>Learners can do a review good problems which were added to <remember> list.</li>
+</ul>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761522923/2016-10-06-images---cs492-new/16.png" />
+
+</div>
+<p>　</p>
+<h4 id="dimension-analysis-2">7-Dimension Analysis</h4>
+<p><img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475762804613/2016-10-06-images---cs492-new/22.png" />　</p>
+<p>(If the image is broken, use the hyperlink below)</p>
+<p><a href="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475762804613/2016-10-06-images---cs492-new/22.png" class="uri">https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475762804613/2016-10-06-images---cs492-new/22.png</a></p>
+<hr />
+<h2 id="c.-summary">C. Summary</h2>
+<div class="figure">
+<img src="https://sites.google.com/a/se.kaist.ac.kr/online-image-storage-ymbaek/_/rsrc/1475761533465/2016-10-06-images---cs492-new/17.png" />
+
+</div>
+</body>
+</html>

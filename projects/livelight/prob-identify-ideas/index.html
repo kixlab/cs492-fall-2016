@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="problem-identification">Problem identification</h1>
+<h2 id="jangyungi-jiwoopark-muhammad-umair">JangYungi, JiwooPark, Muhammad Umair</h2>
+<h2 id="what-is-the-problem-your-team-is-trying-to-solve">What is the problem your team is trying to solve?</h2>
+<p>Unlike that of text documents, the contents of videos are not easily searchable.</p>
+<h2 id="how-do-we-know-this-problem-exists-why-is-this-problem-important">How do we know this problem exists? Why is this problem important?</h2>
+<p>Online learning platforms such as MOOCs contain several videos on a topic. These videos are often long and contain a variety of topics/ideas/concepts. If there is a topic we want to find among those videos, we find it is very difficult because these concepts are not searchable and cannot be directly accessed by typing a keyword. Even when you find the right video, finding topics of your interest within the video involves skimming timeline and thumbnails. This is very time-consuming and frustrating experience for a learner trying to find a particular information. By providing ways to search videos with their indexes based on time-series tags, we want to present a much easier way to find the very information from a massive number of videos. Movida Labs <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> is a platform to index a video, extract people, places, organizations, keywords, and locations etc. Pavel et. al presented Video Digests <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, which makes it easy to browse and skim contents of informational videos by segmenting them into chapters. Crowdy <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> by Weir et. al involves learners to generate subgoals for how to videos and finally there <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> is another approach in the existing literature to index videos.</p>
+<h2 id="why-use-crowdsourcing-for-the-problem">Why use crowdsourcing for the problem?</h2>
+<p>There exist thousands of videos online and using automated approach would not only be costly but error prone also. To deal with these videos online, group of experts would be extremely expensive, time-costing and not scalable. Also, machine algorithm is not that improved to control this type of tasks as they require comprehensive and detailed speech/image recognition. There are thousands of online-video watchers, they have detailed and sensitive speech/image recognition as well as scalability. We intend to use these watchers to generate our content.</p>
+<h2 id="what-specific-challenges-exist">What specific challenges exist?</h2>
+<ol style="list-style-type: decimal">
+<li>HMW let crowd workers type in appropriate tags on the video?</li>
+<li>HMW provide interesting experiences for the volunteer workers to participate in and motivate them?</li>
+<li>HMW aggregate collected data in natural language from the crowd?</li>
+<li>HMW control the noise and prevent possible attacks from malicious users?</li>
+<li>HMW promote the goodwill of making videos searchable?</li>
+<li>HMW make crowd workers get something meaningful while working for this project?</li>
+<li>HMW make criteria for users to view the results?</li>
+<li>HMW use the crowd to segment based on different topics discussed in a video?</li>
+<li>HMW gather “initial” users?</li>
+<li>HMW make validation process done automatically by the system?</li>
+</ol>
+<h2 id="solutions">Solutions</h2>
+<h3 id="solution-1-vidindex">Solution #1: VidIndex</h3>
+<h3 id="what-is-the-one-sentence-summary-of-the-idea">What is the one-sentence summary of the idea?</h3>
+<p>Making lecture videos searchable using crowdsourcing.</p>
+<h3 id="describe-a-scenario-from-the-requesters-point-of-view.">Describe a scenario from the requester's point of view.</h3>
+<ol style="list-style-type: decimal">
+<li>Requesters upload the video using our platform.</li>
+<li>The video is then made available to crowd workers.</li>
+<li>The final result includes an indexed video with topics as labels. These labels are then searchable using the search option.</li>
+</ol>
+<h3 id="describe-a-scenario-from-the-workers-point-of-view.">Describe a scenario from the worker's point of view.</h3>
+<ol style="list-style-type: decimal">
+<li>Workers are the people who are watching the video.</li>
+<li>During the learning experience as crowd workers, we will ask them to describe the topic of what they are watching right now. They will be allowed to type in a textbox.</li>
+<li>Such results will be collected from every learner watching these videos.</li>
+<li>These learners are able to search videos finally.</li>
+</ol>
+<h3 id="analyze-the-idea-using-the-seven-dimensions-above.">Analyze the idea using the seven dimensions above.</h3>
+<ul>
+<li>Motivation - why would a crowd worker do this?
+<ul>
+<li>Crowd workers are interested in the topic they are watching. They are aware of the purpose of data we are collecting from them. It is likely for them to contribute to the system they would like to use in future.</li>
+</ul></li>
+<li>Aggregation - how are results from multiple workers combined?
+<ul>
+<li>Results from multiple workers are combined by choosing the best one. Another group of crowd workers is to be asked to select the best result.</li>
+</ul></li>
+<li>Crowd pool
+<ul>
+<li>Crowd pool are the intrinsically motivated crowd, who are willing to learn from the videos.</li>
+</ul></li>
+<li>Quality control - how to ensure valid results?
+<ul>
+<li>Validity is generated by asking other learners to vote the results of existing learners.</li>
+<li>Reputation system.</li>
+</ul></li>
+<li>Human skill - what kind of human skill is required to complete a task?
+<ul>
+<li>There are no specific human skills needed for crowd workers. They should know how to operate a computer.</li>
+</ul></li>
+<li>Process order - in what order is the work processed between computer, worker, and requester?
+<ol style="list-style-type: decimal">
+<li>Videos are uploaded to the system by instructors.</li>
+<li>Learners watch those videos and generate the list of topics discussed in the video. These topics are then verified by other sets of learners.</li>
+<li>Finally, when a video is completely indexed. It is allowed to search by future learners.</li>
+</ol></li>
+<li>Goal visibility - how much of the overall goal of the system is visible to an individual crowd worker?
+<ul>
+<li>The goal is visible here. Every learner will know why he is being asked to submit the current topic discussed which will be key motivation point for the learners.</li>
+</ul></li>
+</ul>
+<h3 id="solution-2-video-bookmarking">Solution #2: Video Bookmarking</h3>
+<h3 id="what-is-the-one-sentence-summary-of-the-idea-1">What is the one-sentence summary of the idea?</h3>
+<p>Make a plugin to save bookmarks for videos then use it as a source for generating video indexes.</p>
+<h3 id="describe-a-scenario-from-the-requesters-point-of-view.-1">Describe a scenario from the requester's point of view.</h3>
+<p>There is no explicit requester. This system is powered by the instrinsic behavior of watchers. Which means there is no need work for requesters.</p>
+<h3 id="describe-a-scenario-from-the-workers-point-of-view.-1">Describe a scenario from the worker's point of view.</h3>
+<ol style="list-style-type: decimal">
+<li>Workers mark the bookmark while they watch the video. The system would notice them, the marking behavior will give a benefit to other watchers as well as themselves.</li>
+<li>They mark not only the specific period, the interval of the video, but also they could give the tags, descriptions of the video.</li>
+<li>The system uses collected data to make video searchable.</li>
+</ol>
+<h3 id="analyze-the-idea-using-the-seven-dimensions-above.-1">Analyze the idea using the seven dimensions above.</h3>
+<ul>
+<li>Motivation - why would a crowd worker do this?
+<ul>
+<li>Crowd worker's behavior (marking bookmark, tags...) to rewatch some part of the video.</li>
+</ul></li>
+<li>Aggregation - how are results from multiple workers combined?
+<ul>
+<li>System will collect the data from the user to make video searchable.</li>
+<li>Crowd can view the tags, and they can filter out what is good tags or bad tags by voting.</li>
+</ul></li>
+<li>Crowd pool
+<ul>
+<li>All the users who want video is in our crowd pool.</li>
+</ul></li>
+<li>Quality control - how to ensure valid results?
+<ul>
+<li>They can review previous workers' bookmarks and report to the system.</li>
+</ul></li>
+<li>Human skill - what kind of human skill is required to complete a task?
+<ul>
+<li>Basic bookmarking skill is needed to complete a task.</li>
+</ul></li>
+<li>Process order - in what order is the work processed between computer, worker, and requester?
+<ol style="list-style-type: decimal">
+<li>In this solution, there is no specific requester, all the videos on the web could be a target.</li>
+<li>The system only runs in the background and help when workers want to tag them.</li>
+<li>Workers just do their bookmarking.
+<ul>
+<li>Videos on the website</li>
+<li>Workers watching videos</li>
+<li>System deals with collected data</li>
+</ul></li>
+</ol></li>
+<li>Goal visibility - how much of the overall goal of the system is visible to an individual crowd worker?
+<ul>
+<li>All workers can know what they are doing since we will announce them their work will be a help making video searchable.</li>
+</ul></li>
+</ul>
+<h3 id="solution-3-video-telepathy">Solution #3: Video Telepathy!</h3>
+<h3 id="what-is-the-one-sentence-summary-of-the-idea-2">What is the one-sentence summary of the idea?</h3>
+<p>An ESP-game-like approach that makes crowd workers provide time-series tags of videos by giving overlapping segments of videos and giving the sense of playing a word matching telepathy game.</p>
+<h3 id="describe-a-scenario-from-the-requesters-point-of-view.-2">Describe a scenario from the requester's point of view.</h3>
+<ol style="list-style-type: decimal">
+<li>A requester uploads a video. The selection could be done both automatically and manually. This video has no metadata or time-series index at this moment.</li>
+<li>Then, the video is segmented and used as a material for questions in this game.</li>
+<li>After crowd workers finish playing the game, the video is full of user generated metadata as a result of playing the game. With this time-series indexes, the video is easily searchable.</li>
+</ol>
+<h3 id="describe-a-scenario-from-the-workers-point-of-view.-2">Describe a scenario from the worker's point of view.</h3>
+<ol style="list-style-type: decimal">
+<li>As a crowd worker, a game player starts to play the game.</li>
+<li>The player sees a 15-second-length video, which is a part of the entire video to be tagged.</li>
+<li>After seeing the video, the player is asked to type in the description of the video.</li>
+<li>Then, using input agreement and output agreement, the validation of user contribution is made.</li>
+<li>When the worker properly answers the question and it is correct, then the player gets points. The score of each user is posted on the leaderboard for encouraging user competition.</li>
+</ol>
+<h3 id="analyze-the-idea-using-the-seven-dimensions-above.-2">Analyze the idea using the seven dimensions above.</h3>
+<ul>
+<li>Motivation - why would a crowd worker do this?
+<ul>
+<li>For fun, it’s a game.</li>
+<li>Humanitarian philanthropic intention to enrich the searchability of videos on the internet!</li>
+</ul></li>
+<li>Aggregation - how are results from multiple workers combined?
+<ul>
+<li>Selective aggregation is used. There are two steps for contributions to pass. Using input agreement, the validity of user contributions are checked. After that, using output agreement, only matching words are used as indexes.</li>
+</ul></li>
+<li>Crowd pool
+<ul>
+<li>Gamers who are willing to play fun games to enrich the experience of searching on the internet.</li>
+</ul></li>
+<li>Quality control - how to ensure valid results?
+<ul>
+<li>As workers are game players, they want to get high scores. In order to get good scores, they have to sincerely type in tags that matching other users may type.</li>
+<li>Using the selective aggregation with input/output agreement, the validation is ensured.</li>
+</ul></li>
+<li>Human skill - what kind of human skill is required to complete a task?
+<ul>
+<li>It does not require any specific skills to play this game.</li>
+</ul></li>
+<li>Process order - in what order is the work processed between computer, worker, and requester?
+<ol style="list-style-type: decimal">
+<li>Requester posts the list of videos to be tagged.</li>
+<li>The system segmentizes the video into 15-second-length overlapping segments.</li>
+<li>Using the segmented video, workers play telepathy games to tag the video.</li>
+<li>Aggregation is done to make the time-series indexes from the result of the gameplay.</li>
+</ol></li>
+<li>Goal visibility - how much of the overall goal of the system is visible to an individual crowd worker?
+<ul>
+<li>The purpose of playing the game can be shared.</li>
+<li>However, when players play the game, the goal or the current progress is not explicitly visible.</li>
+</ul></li>
+</ul>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>http://movidalabs.com/<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Pavel, Amy, et al. &quot;Video digests: a browsable, skimmable format for informational lecture videos.&quot; UIST. 2014.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Weir, S., Kim, J., Gajos, K.Z., and Miller, R.C. Learnersourcing Subgoal Labels for How-to Videos. CSCW’15, ACM (2015).<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Irani, M., &amp; Anandan, P. (1998). Video indexing based on mosaic representation. IEEE Transactions on Pattern Analysis and Machine Intelligence, 86(5), 905–921.<a href="#fnref4">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>

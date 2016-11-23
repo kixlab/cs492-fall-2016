@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="problem-identification-and-ideas">Problem Identification and Ideas  </h1>
+<p>   Junsoo Park    20164320    Youngbo Shim    20164350    Sanggyun Ahn    20164352   ***</p>
+<h2 id="what-is-the-problem-your-team-is-trying-to-solve-one-sentence">1. What is the problem your team is trying to solve? (one sentence)  </h2>
+<p>Novice researchers face difficulties in reading scientific papers of unfamiliar fields in a short amount of time with a good level of understanding.</p>
+
+<h2>2. How do we know this problem exists? Why is this problem important?</h2>
+<p>Many researchers spend a lot of time reading and understanding scientific papers [7]. The tough point is that, reading a long piece of article doesn’t come always easy.  Furthermore, good reading itself is fundamentally demanding since it requires a high cognitive ability of human. Accordingly, some experienced researchers provide tips on how to read a scientific paper effectively [2,3]. Also, there exist a number of  many researches in regard to better performance and experience of a general reading activity [4, 6]. Furthermore, some popular services for managing academic papers provide simple features for effective reading such as highlighting and annotation [1, 5]. However, while these services and focus on the general reading support, such as simple annotating and highlighting features, the task of understanding the contents of the paper is left up to the lone reader. According to our own experiences, as novice researchers, due to unfamiliarity of paper-reading methodology and limited knowledge in the area, we are often unsure if we are truly understanding the main points of the paper. Thus, in expense of high cost of reading time, we get relatively shallow level of understanding. If we can help novice researchers to effectively read and understand the paper, they may gain reading ability quickly and less suffer from misunderstanding. </p>
+<p>  [1] Endnote (<a href="http://endnote.com/" class="uri">http://endnote.com/</a>)   [2] Fong, P. W. (2009). Reading a computer science research paper. ACM SIGCSE Bulletin, 41(2), 138-140.   [3] Keshav, S. (2007). How to read a paper. SIGCOMM Comput. Commun. Rev. 37, 3 (July 2007), 83-84.   [4] Chircop, L., Radhakrishnan, J., Selener, L., &amp; Chiu, J. (2013, April). Markitup: crowdsourced collaborative reading. In CHI'13 Extended Abstracts on Human Factors in Computing Systems (pp. 2567-2572). ACM.   [5] Mendeley (<a href="https://www.mendeley.com/" class="uri">https://www.mendeley.com/</a>)   [6] Han, C. H., Yang, C. L., &amp; Wang, H. C. (2014, April). Supporting second language reading with picture note-taking. In CHI'14 Extended Abstracts on Human Factors in Computing Systems (pp. 2245-2250). ACM. Chicago   [7] Tenopir, C. &amp; King, D. W. (2008). Electronic Journals and Changes in Scholarly Article Seeking and Reading Patterns. D-Lib Magazine (<a href="http://www.dlib.org/dlib/november08/tenopir/11tenopir.html" class="uri">http://www.dlib.org/dlib/november08/tenopir/11tenopir.html</a>).  </p>
+<h2>3. Why use crowdsourcing for the problem? Why not use machines or a small group of experts?</h2>
+<p> First of all, since we are aiming novice researchers themselves as a crowd, they might collaborate well with each other for the same goal, better understanding of unfamiliar scientific papers. Understanding a scientific paper is a semantically challenging activity, which is difficult to be supported by an autonomous machine of today’s state of the art natural language processing technology. Experts are usually less available and much expensive than crowd. In addition, in contrast to experts, crowds have intrinsic motivation to learn something. Furthermore, experts might not know well about what points novice readers suffer from.</p>    
+
+<h2>4. Ten “How might we…” questions</h2>
+<ul>
+<li>HMW get the main point of the article fast?  </li>
+<li>HMW reduce the need to read the whole paper?  </li>
+<li>HMW avoid disturbing the reader's’ concentration?  </li>
+<li>HMW make reading paper the most exciting part of studying?  </li>
+<li>HMW make reading a paper instant?  </li>
+<li>HMW ensure that our system is actually helping the understanding of reader?  </li>
+<li>HMW make our system use natural behaviors of readers?  </li>
+<li>HMW make the working experience similar to analyzing an actual paper?  </li>
+<li>HMW make it easy to make a summary?  </li>
+<li>HMW make a paper viewable at a glance?  </li>
+</ul>
+
+<h2>5. Candidate Solution and Analysis  </h2>
+
+<h3 id="csps-crowdsourced-paper-summarizing-platform">1. CSPS: Crowdsourced paper summarizing platform</h3>
+<h4 id="one-sentence-summary-of-the-idea">One-sentence summary of the idea  </h4>
+<p>Help understanding the content of paper by crowdsourced paper summarizing platform.</p> 
+<h4>User scenario</h4><p>In this service, requester herself is also a worker. For convenience, we call these workers (requesters also) as ‘readers’. First, reader registers paper of interest on the platform. Then she start to read it following the instructions(or tasks) given by the platform. The tasks are given in several steps, and the reader may conduct only one of them. Below are the descriptions of each subtasks.  </p>
+<p>1.    Highlight on the important word for each paragraph</br>
+2.    Construct a sentence for each paragraph using 1’s highlighted words.</br>
+3.    Summarize the chapter’s content using 2’s sentences.  </p>
+<p>By doing these it is expected that the reader might look at the paper in detail, which leads to better understanding. Also, the result of this tasks will end up in stage-specific annotations of the paper. Other lucky readers might find out this as a reading guideline.  </p>
+<h4 id="analysis">Analysis  </h4>
+<ul>
+<li><p>Motivation  : Novice researchers who are not yet comfort in paper reading might be attracted by this read-supporting tool. Also, even general researchers may also use this system to skim the related works.</p></li>
+<li><p>Aggregation  : Data from same level of subtasks are aggregated and shown to the next level. Since they are simple highlighting notation or a sentence, all could be easily presented as a computational resource.</p></li>
+<li><p>Crowd pool : We guess our crowd might be mainly novice researchers, and this is also our expectation. Professionals may also use the service to use the service as a summary searcher.</p></li>
+<li><p>Quality control : Each subtask may need a different quality control scheme. For example, highlighted words will evaluated by majority votes. On the other hand, result sentences from subtask 2 and 3 might be assessed by iterating the modify &amp; selection process.</p></li>
+<li> Human skill : Base knowledge to understand the paper might be needed.     </li>
+<li><p>Process order  : While reading the paper following the instructions of the platform, reader (worker) will fill out the data. This is automatically gathered and processed by the machine. The final summary result is shown as a public data, which might be used by readers (requester)</p></li>
+<li><p>Goal visibility  : Workers (readers) do know how their task result might be processed for each steps. Also, the aggregated data will be shown in well-formed summary via the platform.</p></li>
+</ul>
+<h3 id="micro-stack-overflow-within-a-paper">2.    Micro-Stack-Overflow Within a Paper  </h3>
+<h4 id="one-sentence-summary-of-the-idea-1">One-sentence summary of the idea  </h4>
+<p>Micro-Stack-Overflow Within a Paper: co-reading platform for graduate students, who need more explanation on an unfamiliar topic of academic paper, which let them ask and answer within the paper.</p>
+<h4>User scenario</h4>
+<ul>
+<li>INITIATE: A student, who wants to efficiently read and understand a paper of unfamiliar topic, initiates an instant study group of the paper in online platform.</li>
+<li>JOIN: Other students, who have an interest in the paper but little background knowledge, join the group. The only condition for joining a study group is KAIST e-mail account.</li>
+<li>USE INTERFACE: Once joining the group, students can participate through the interface of platform. The platform consists of main reading panel where students see the paper, micro-stack-overflow panel where a list of ask-answer sets is displayed, and leader-board panel.  </li> 
+<li>ASK: When finding a specific content (e.g., word, sentence and figure) of the paper which needs more explanation, a reader (as an asker) can highlight the area of interest by a ask-highlighter with a short note. The highlighted content (i.e., ask-highlight) is visible on the paper and the list of the micro-stack-overflow panel.</li>
+<li>ANSWER: Any reader (as an answerer) can resolve ask-highlights on paper by attaching useful URL link or answering it directly by him or herself. When ask-highlight is resolved, the platform informs corresponding asker and lets him or she confirm or reject the answer. Only confirmed answers are fixed on the explanation panel. The contents with confirmed answers changes its highlight color to be identified by readers.</li> 
+<li>EXPLORE: By dragging and selecting the specific area of interest on the paper, readers can open micro-stack-overflow panel and see a list of ask-answer sets in regard to the selected area. When finding some ask or answer useful, reader can vote it up. According to the vote points, micro-stack-overflow reorder the list.</li>
+<li>VISIBILITY: The ask-highlight made by reader who has resolved more asks made by others becomes more visible by changing saturation. Ask-highlights with higher vote points also become more visible. The area of confirmed answer with higher vote does too. </li>
+<li>GAMIFICATION: The number of remaining ask-highlights to be resolved is displayed. Also, leader-board keeps update to show who has resolved the most.  </li>
+</ul>
+<h4 id="analysis-1">Analysis  </h4>
+<ul>
+<li>Motivation   Basically, the platform based on the intrinsic motivation of crowd as learners. And, there are some systematic design to motivate crowd such as showing the number of remaining ask-highlights to be resolved and leader board.  </li>
+<li>Aggregation   Firstly, the asker screen candidate answers and confirm one.  </li>
+<li>Crowd pool   Crowd consists of learners, especially students who have KAIST email account.  </li>
+<li>Quality control   Readers also vote on good ask or useful answer. Poor questions and answers are less visible to the members.  </li>
+<li>Human skill   High cognitive skill to read and understand an academic paper, which is hard to done by machine.  </li>
+<li>Process order(Explained in user scenario)  </li>
+<li>Goal visibility   It shows the number of remaining ask-highlights to be resolved.  </li>
+</ul>
+<h3 id="highlightshare">3.    HighlightShare  </h3>
+<h4 id="one-sentence-summary-of-the-idea-2">One-sentence summary of the idea  </h4>
+<p>Users share their in-document highlights and interact with them for a mutually beneficial learning experience.</p>
+<h4>User scenario</h4>
+Creating a task   Bob, a student in CS492 class, wants to write a reading response to a paper called “The Rise of Crowdsourcing”. He first goes into the HighlightShare website and searches the name of the paper. He may get a result, with the paper marked as “annotated, but hardly analyzed”, or “thoroughly analyzed”. If he doesn’t get a result, he submits the paper, which is added in the system’s database. He may wait for some time, until the system notifies Bob that enough annotations are done.
+<h4>User interface</h4>
+Bob opens the paper. It looks as if he is reading a pdf document in Adobe Acrobat Reader. He got highlighting tool at disposal.
+<h4>Review result</h4>
+Bob’s current goal is to get a quick summary of the paper. He skims the paper, and sees the highlights already made by other users. Each highlight has tags to the side, which reads like “problem statement”, “main contribution”, “methodology”, “experiment result”, “what?”, “I like it”, etc. By combining the highlighted bits, Bob is able to gather necessary information for a summary.
+<h4>Worker motivation and task experience</h4>
+Few minutes later, Bob wants to make detailed analysis of the paper. He is going to read the paper in detail anyway, but thinks that it would be nice to see what others think of the paper and of his critiques. He highlights what he considers important in the paper. As soon he highlights, a prompt asks, “what makes this important?”, and shows some examples to select from, such as “problem statement”, “main contribution”, “supports …”. He chooses “supports…”, and then clicks another highlighted statement, which makes it the supporting statement of the other.
+<h4>Worker interaction</h4>
+He sees a highlighted statement, but even the attached tag doesn’t make sense to him why it is important. He doesn’t want this irrelevant highlight to disturb his reading, so he just deletes the highlight, and leaves a comment “irrelevant point”. If others do the same as Bob, the highlight will probably be hidden for future workers.
+<h4>Analysis</h4>
+<ul>
+<li>Motivation :  Workers are learners who wants to read the paper in detail anyway. They want to use the platform because they want to see what others think about their paper and about his own thoughts.</li>
+<li>Aggregation :  The highlights are automatically shared, and are subject to edits by others.</li>
+<li>Crowd pool :  The crowd is intrinsically motivated, as they will participate in the paper only if they want to know about that paper.</li>
+<li>Quality control :  The crowd can delete and edit the highlights made by others. If there are sufficient similar changes, the change or deletion is applied to the highlight.</li>
+<li>Human skill :  For a worker, a basic reading ability is required, and analysis of scientific arguments is preferred.</li>
+<li>Process order :  The requester posts a paper on the system. The worker edits the highlights on the system. The requester can review the work anytime.</li>
+<li>Goal visibility : This is obvious to both the requesters and workers as they all want to better understand the paper.</li>
+</ul>
+</body>
+</html>

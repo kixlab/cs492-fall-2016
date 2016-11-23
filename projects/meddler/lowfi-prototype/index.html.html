@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2016-Fall_CS492_Meddler_milestone-04-prototype1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Low-Fi Prototype</h1>
+<p>CS492 Crowdsourcing - Final Project: <strong>Milestone 4</strong> (2016-11-10)</p>
+<ul>
+<li>20165192 Sunggeun Ahn (topmaze@kaist.ac.kr)</li>
+<li>20165161 Young-Min Baek (ymbaek@se.kaist.ac.kr)</li>
+<li>20163703 Sungjae Hong (yain@kaist.ac.kr)</li>
+</ul>
+<hr />
+<h2>A. Problem Identification</h2>
+<h3>PROBLEM STATEMENT &amp; GOAL</h3>
+<h4>What is the problem our team is trying to solve?</h4>
+<ul>
+<li>
+<strong>Global problem</strong>: Unfair and ineffective environment for learning and education
+<ul>
+<li>specific problem 1. We need to study anytime and anywhere</li>
+<li>specific problem 2. We need to be motivated to learn</li>
+<li>specific problem 3. We need newer and more diverse problems</li>
+</ul>
+</li>
+<li><strong>High-level goal</strong>: Fair opportunity of effective education using crowdsourcing　</li>
+</ul>
+<h4>Our solution: Let's think about a study group using smartphones</h4>
+<ul>
+<li>
+<strong>Crowdsourcing platform for study groups</strong>
+<ul>
+<li>Make &amp; share a new problem as a worker</li>
+<li>Solve crowds' problems as a learner</li>
+<li>Evaluate crowds' problems for improvement</li>
+<li>Manage our own learning history for review</li>
+</ul>
+</li>
+</ul>
+<h4>Why do we use crowdsourcing for the problem?</h4>
+<ul>
+<li><strong>Crowds</strong> can <strong>effectively stimulate learners</strong> to study in a <strong>person-to-person</strong> way.</li>
+</ul>
+<hr />
+<h2>B. Tasks</h2>
+<h3>BRIEF SUMMARY</h3>
+<p>Name of platform: <strong><em>1-Day-N-Questions</em></strong> (N can be an arbitrary number)</p>
+<p>Our platform utilizes crowdsourcing technique to address issues of the fairness of education. Our main goal is to offer equal opportunity to learners based on crowdsourced knowledge. Our system basically supports learners just like a <em>study-group system</em>. More specifically, Every user can be both a requester and a worker, and each user receive help from (or offer help to) other users over our platform. The users can benefit from not only <em>sharing their customized problems</em>, but also <em>managing their own learning history</em>. Lastly, for the sake of implementation-level simplicity, we only focus on English-related problems, such as English words, phrases, and sentences.</p>
+<p><img src="images/figure.png" /></p>
+<p>.................................................................................................................................</p>
+<h3>TASK 1. Making a New Problem</h3>
+<h5>About Task 1:</h5>
+<p>In order to get answers of a given problem, the first thing we have to do is <em>to make (or write) a new problem</em>. For an easy process of problem making, a specific type of question should be defined by our platform and intuitive user interface should also be provided. Our platform mainly supports English-related problems and each problem can be easily customized by a problem provider. Afterwards, the written problem is released to unspecified learners (crowds) through our platform, and those who receive the problem will try to solve it [<em>Task 2</em>]. </p>
+<h5>Requirements:</h5>
+<ul>
+<li>
+<strong>Requirement 1-A: A system must provide a submission form for a user to fill out or customize</strong>
+<ul>
+<li>A submission form contains: (1) A question, (2) following statement/selection, (3) expected answers, (4) tags related to the question, (5) hints, (6) a textbox for extra description/help, (7) a time limit, (8) a submission button, and (9) an initialization button.</li>
+<li>Tags can be used as hints of the answer, so inserting tags is not mandatory.</li>
+<li>When a question maker submits the written problem, our system must save the data into the database and categorize it.</li>
+</ul>
+</li>
+<li>
+<strong>Requirement 1-B: Each problem (question) has to contain a time limit defined by a question maker</strong>
+<ul>
+<li>In order to test whether other users know the answer or not without cheating, the time limit is used. </li>
+<li>A time limit cannot exceed 2 minutes.</li>
+</ul>
+</li>
+<li>
+<strong>Requirement 1-C: A system must check redundancy of written problems and filter out them in real-time</strong>
+<ul>
+<li>Our system should analyze the written question and following statement/selection with its expected answers and compare them with the stored data in DB.</li>
+<li>If a word is found in DB, but not found in question-maker's word book, the new question is simply stored in his or her word book DB.</li>
+<li>If an already existing word is found in question-maker's word book, a popup message box should be shown to the question maker immediately.</li>
+</ul>
+</li>
+</ul>
+<p>.................................................................................................................................</p>
+<h3>TASK 2. Solving and Evaluating Problems + Checking My Groups &amp; Study History</h3>
+<h5>About Task 2:</h5>
+<p>In order to solve problems, the system should let the other users receive the problems first. For the ease of use, this process should be automatically done by the system. For example, an alarm system can be one possible approach for this sub-task. After the receive, the system should provide an interface for solve the problems. The interface should be simple and the process must not demand much typing because the system is mobile-based. Lastly, the system should give the users a way to evaluate the given problems. Additionally, a learner need learning record to estimate academic achievements, to schedule study plan, and, to motivate his/her learning. </p>
+<h5>Requirements:</h5>
+<ul>
+<li>
+<strong>Requirement 2-A: A system must provide an automatic process for users to receive problems</strong>
+<ul>
+<li>An alarm will go to an user if the user receives a problem</li>
+<li>For an active user who wants to study more, a system should provides a button in a system to receive a problem</li>
+</ul>
+</li>
+<li>
+<strong>Requirement 2-B: A system must provide a simple interface and process for users to solve problems</strong>
+<ul>
+<li>Single problem, without an answer, is shown to an user after receiving it</li>
+<li>After pushing the button, the answer will be shown to an user</li>
+</ul>
+</li>
+<li>
+<strong>Requirement 2-C: A system should give the users a way to evaluate the given problems</strong>
+<ul>
+<li>Three buttons(&quot;Easy&quot; &quot;Normal&quot; &quot;Hard&quot;) are given to users to evaluate a problem after a solving process</li>
+</ul>
+</li>
+<li>
+<strong>Requirement 2-D: Record must provide a distinctive dimensions of learning status</strong>
+<ul>
+<li>To schedule a learning plan, a user must know strength point and weakness point of own achievement level. Tags, described in the Task 1, can be a distinctive dimensions for achievement level. </li>
+</ul>
+</li>
+<li>
+<strong>Requirement 2-E: Record must include a improvement history</strong>
+<ul>
+<li>Learning history can provide a information about the effort of learning. However if there are no information about the achievement level, a learner shouldn't convince result of learning, therefore, record must include history of improvement to determining current status of learning. </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>C. Prototype</h2>
+<h3>BRIEF SUMMARY</h3>
+<p>For the success of the platform to solve the problems stated, evaluations to check the effectiveness of the idea and the usability are necessary. However, it would cost too much and be unnecessary to construct full platform for user evaluations in a developing phase, because what we want to be evaluated are only core parts of the platform. Therefore, it would be better to create a prototype for a platform and get evaluated. Fortunately, there are variety of platforms and services which help developers to create their own prototypes, such as proto.io, Marvel, and so on. </p>
+<p>.................................................................................................................................</p>
+<h3>PROTOTYPING TOOL</h3>
+<h5>Choice of the tool: Marvel</h5>
+<p>Official Website: <a href="https://www.marvelapp.com">https://www.marvelapp.com</a></p>
+<p>Four criteria are used to choose the prototyping tool: easeness, fanciness, scalability, and additional features. Marvel provides GUI, which does not need any coding knowledge, for developers who want to create prototypes. Moreover, it provides various fancy designs and enables .psd formats to be used so developers can create fancy prototypes. Marvel also gives PC, iPhone, iPad, and Android frames so developers do not have to worry about what if there is no appropriate frame for the prototype. In addition, the platform enables to import images from dropbox, so efficient development of prototype is possible for the team, as we have done most of works on dropbox.</p>
+<h5>What worked well with Marvel:</h5>
+<p>As described above, Marvel enables us to provide a prototype in short amount of time with nice visualization. Moreover, it provides smartphone interface so the easeness on the prototype creation improved.</p>
+<h5>What did NOT work well with Marvel:</h5>
+<p>First, due to its simpleness, the platform does not provide detailed situations, such as typing a text. Moreover, as it is mere a prototype, we cannot provide an algorithm onto a prototype, which helps the platform to provide user-based experience. In addition, Marvel does not provide smartphone-based prototype usage unless spending money. Although using the link we can play the prototype test through the smartphone, this made inconvenience.</p>
+<p>.................................................................................................................................</p>
+<h3>Design Choices</h3>
+<h5>Choice of elements NOT to implement:</h5>
+<ul>
+<li>
+<strong>NOT to implement 1: Typing texts, Background algorithms, Buzz alarms</strong>
+<ul>
+<li>These elements cannot be impelemented through Marvel, thus we do not implement those on the prototype.</li>
+</ul>
+</li>
+<li>
+<strong>NOT to implement 2: Initial sign-up stage to get into cyber study group</strong>
+<ul>
+<li>As this is related with background algorithms which can allocate users in study groups of proper level, we decided not to implement this stage.</li>
+</ul>
+</li>
+</ul>
+<p>.................................................................................................................................</p>
+<h3>Screenshots of Important Scenes in Prototype</h3>
+<h4>Screenshots for Task 1</h4>
+<ul>
+<li>
+Prototype link: <a href="https://marvelapp.com/159c7g9">TASK1-PROTOTYPE (https://marvelapp.com/159c7g9)</a>
+<ul>
+<li>Run our 1DNQ app using a floating button</li>
+<li>Make a new word card (question)</li>
+<li>Add a new card into individual wordbook, and share it with others</li>
+<li>Check the message</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/screenshot_task1_01.png" /><img src="images/screenshot_task1_02.png" /><img src="images/screenshot_task1_03.png" /></p>
+<h4>Screenshots for Task 2</h4>
+<ul>
+<li>
+Prototype link: <a href="https://marvelapp.com/125i8fc">TASK2-PROTOTYPE (https://marvelapp.com/125i8fc)</a>
+<ul>
+<li>Check a push message</li>
+<li>Solve a given problem (question)</li>
+<li>Self evaluation of the answer</li>
+<li>Evaluate the question</li>
+<li>Check my study groups and study records</li>
+<li>Review my study</li>
+<li>Search a new group and join it</li>
+<li>Check my group list</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/screenshot_task2_01.png" /><img src="images/screenshot_task2_02.png" /><img src="images/screenshot_task2_03.png" /><img src="images/screenshot_task2_04.png" /><img src="images/screenshot_task2_05.png" /><img src="images/screenshot_task2_06.png" /><img src="images/screenshot_task2_07.png" /><img src="images/screenshot_task2_08.png" /></p>
+<p>.................................................................................................................................</p>
+<h3>Instructions for User Feedback</h3>
+<h4>Purpose</h4>
+<ul>
+<li>To find out the usability problems in the prototyped interface of the platform</li>
+<li>To get the insight about some decision factors for the platform, such as how many times push alarms should ring for a day</li>
+</ul>
+<h4>Task 1: Submitting a question (15 min.)</h4>
+<ul>
+<li>
+<p>Process</p>
+<ul>
+<li>Provide a reading material for task 1 </li>
+<li>Let participants to read the reading material </li>
+<li>If the participant finds a unknown word, </li>
+<li>Find a meaning of the word using a dictionary, then</li>
+<li><strong>Write down a word on the blank</strong></li>
+<li><strong>Write down expected answers</strong></li>
+<li>Select a tag</li>
+<li>Set a hint</li>
+<li>Set a time limit</li>
+<li>(Optional) Write down extra destriptions</li>
+<li>Click a submission button</li>
+</ul>
+</li>
+<li>
+<p>INSTUCTION (유저스터디용 인스트럭션)</p>
+<ul>
+<li>
+Read a given reading material in detail,
+<ul>
+<li>주어진 자료를 자세히 읽으면서 </li>
+</ul>
+</li>
+<li>
+If you find an unknown word in the paper, please record a word on the given application.
+<ul>
+<li>읽다가 모르는 단어가 있으면 이 어플리케이션에 기록을 해주십시오</li>
+</ul>
+</li>
+<li>
+For this task, you can record a word instantly on the application, or just check-and-skip at time and record all checked words altogether after reading.
+<ul>
+<li>단어 기록은 모르는 걸 찾았을 때 바로 기록할 수도 있고, 아니면 체크만 하고 넘어갔다가 한꺼번에 기록해도 됩니다다. </li>
+</ul>
+</li>
+<li>
+And, you should say all of your 'thinking aloudly' while you do a task.
+<ul>
+<li>그리고 테스크를 수행하면서 드는 모든 생각들을 말하면서 수행해 주십시오.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Task 2: Solving &amp; evaluating a question</h4>
+<ul>
+<li>
+<p>Two different situations (10 mins each): to monitor difference responses between different level of engagements about study and smartphone. Also, if someone does his/her job, he/she should halt his/her activity and engage to the question (or ingnore an alram and question).        
+</p>
+<ul>
+<li>
+Situation 1: While task 1 
+<ul>
+<li>Studying an English</li>
+</ul>
+</li>
+<li>
+Situation 2: Watching video on PC
+<ul>
+<li>Playing without smartphone (low engagement about smartphone and in the rest)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Process</p>
+<ul>
+<li>Let participants to do a given activity</li>
+<li>While doing the activity, the prototype provides an alarm for question irregularly.</li>
+<li>If participant notices an alarm,</li>
+<li>Let him/her halts his/her activity,</li>
+<li>Solve a question</li>
+<li>Check an answer</li>
+<li>Save whether the user's answer is right and how was the question</li>
+<li>(Optional) Check the user's status, including wordlist and current groups where the user is in</li>
+<li>After solving a question, he/she evaluates a question and turns back to his/her activity.</li>
+</ul>
+</li>
+<li>
+<p>INSTUCTION (유저스터디용 인스트럭션)</p>
+<ul>
+<li>
+While you do given activity (study, watching video 1, 2)
+<ul>
+<li>(situation 1) 테스크 1처럼 공부를 하다가</li>
+<li>(situation 2) pc에서 영상을 보다가</li>
+</ul>
+</li>
+<li>
+If you get an alarm, please halt your activity and check an alarm. Then, you should solve a question.
+<ul>
+<li>알람이 오면, 하던 것을 중지하시고 알람을 확인하고 문제를 풀어주십시오</li>
+</ul>
+</li>
+<li>
+After solving the problem, you should evaluate a question you just solved.
+<ul>
+<li>문제를 풀고나면 푼 문제에 대해서 평가를 해주시면 됩니다.</li>
+</ul>
+</li>
+<li>
+Also, similar to the previous task, you should say all of your thinking aloudly during a task.
+<ul>
+<li>그리고 테스크를 수행하면서 드는 모든 생각들을 말하면서 수행해 주십시오.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Questionnaire (for each task or situation)</h4>
+<ul>
+<li>How easy to use? (1-5: 1- very negative, 3 - normal , 5 - very positive) </li>
+<li>How helpful to study? (1-5) </li>
+<li>How annoying? (1-5)</li>
+</ul>
+<hr />
+<h2>D. User Feedback</h2>
+<p>Four users attended for the task. While two people (Sangyoon, Minchul) are not that familar with English, two others (Yeseul and Jungmin) undergraduated from department of English studies or undergraduated from US college. Through the test from diverse samples, the team can get various comments of the platform which can help us to improve the platform.</p>
+<p>To summarize, there are number of criticisms on the hint or tag in problem making process. Moreover, mumber of additions on the platform are recommended: the expansion of platform to widget, enabling google search, taking picture for making a question, and so on. Less texts on UI and gamification are also recommended by testers.</p>
+<h3>User Feedback Summary</h3>
+<ul>
+<li>
+<p>Comment 1: <em>&quot;It would be better to provide google link for the English word, idiom, or phrase to understand more about the words. Through the link, the users can learn more about usage of the term.&quot;(Yeseul)</em></p>
+</li>
+<li>
+<p>Comment 2: *&quot;It would be better for the platform to have a control bar to change number of push alarms the platform receives for each day. If there are too many alarms, they may annoy the users.&quot;(Jungmin)*</p>
+</li>
+<li>Comment 3: *&quot;It is hard to understand why there is a tag, which describes the characteristics of the term, for the term. Rather then characteristics of the term itself, &quot;different&quot; status, such as whether the term is for TOEIC or TEPS, will be more useful.&quot; (Jungmin)*</li>
+<li>Comment 4: *&quot;If the application can display English words for the study using widget in the android, the usefulness will be improved&quot; (Yeseul)*</li>
+<li>
+Comment 5: *&quot;As this seems to be used for English study group, another way of making a question - just taking a picture of the question - can be easier way for the user to make a question&quot; (Jungmin)
+*
+</li>
+<li>Comment 6: *&quot;I am not sure whether this application will be much better than usual English word list existing in Google Store, or others&quot; (Jungmin)*</li>
+<li>
+<p>Comment 7: <em>&quot;It would be better if the problem provider can mark the hardness and importance of the question&quot; (Sangyoon)</em></p>
+</li>
+<li>
+<p>Comment 8: <em>&quot;It would be better if there is reference of the question and gamification&quot; (Sangyoon)</em></p>
+</li>
+<li>
+<p>Comment 9: <em>&quot;Tag makes me hesitating because I am not sure what to put&quot; (Minchul)</em></p>
+</li>
+<li>
+<p>Comment 10: <em>&quot;If there is brief information of the question on alarm, it may make the platform better&quot; (Sangyoon)</em></p>
+</li>
+<li>
+<p>Comment 11: <em>&quot;There are too much texts on UI&quot; (Sangyoon)</em></p>
+</li>
+<li>
+<p>Comment 12: <em>&quot;Searching ability is necessary for the platform for wordlists&quot; (Minchul)</em></p>
+</li>
+<li>
+<p>Comment 13: <em>&quot;Pushing an alarm is quite annoying&quot; (Minchul)</em></p>
+</li>
+<li>
+<p>Comment 14: <em>&quot;Making a question is quite time-consuming&quot; (Jungmin)</em></p>
+</li>
+</ul>
+<hr />
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

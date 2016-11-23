@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="milestone-4---low-fi-prototype">Milestone 4 - Low-Fi Prototype</h1>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>Live videos such as sports match, presidential debates and videos by YouTube streamers are often very long and contain a lot of uninteresting and boring moments. Highlights for such videos are often not available especially for videos by YouTube streamers despite being watched by a lot of people. Viewers have to skip parts of these videos to see interesting moments which is time consuming and a frustrating experience. We present LiveLight which automatically generates highlights for such videos as soon as the live stream ends.</p>
+<h2 id="tasks">Tasks</h2>
+<h3 id="task-1">Task 1</h3>
+<p>Mr. Kim Bin Jo is very busy in his graduate studies and cannot find enough time for his hobby of playing games. He loves to watch YouTube game streamers playing his favorite games but the problem with such live streamed videos is that they are often very long and takes a lot of his precious time. So, Mr. Kim is hoping to use LiveLight to watch highlights of his beloved video games.</p>
+<h3 id="task-2">Task 2</h3>
+<p>Mr. Kang Jang is very popular YouTube streamer who likes to discuss important and sensitive topics in his live show. He is interested in knowing about the reactions of people about his video</p>
+<h2 id="prototype">Prototype</h2>
+<h3 id="prototyping-tool">Prototyping tool</h3>
+<p>We choose proto.io as the tool for making the prototype. This is because it enables us agile implementation mock-up prototypes with its plenty of features. Especially, we had to be able to embed HTML code within the working prototype as the main feature of our term project is generating highlight videos vid manipulating Youtube videos. proto.io can be used for this. Also, this tools was the most responsive and fast prototyping tool that we have tested. Other prototyping It may be related to the fact that the bandwidth limitation in this university.</p>
+<p>There are a lot of features that we needed in this platform. It was possible for us to show the video and (fake) getting the contribution of the user and (fake) aggregation of contributions from other audiences. Also, the tool supports a lot of images that can be used for design the UI. With these, we could make a nicely looking prototype.</p>
+<p>The problem of this platform is its limitation in running complex procedures. We tried to implement the highlights</p>
+<h3 id="design-choices">Design choices</h3>
+<p>The aggregation of user data cannot be achieved without proper back-end algorithm that is running on server. Because of this, for our prototype, all the contributions made by audiences are not gathered, processed, and integrated on server. Instead, we faked the data and showed the fixed positioned annotations and fixed-time integrated highlights on the timeline.</p>
+<h3 id="representative-screenshots">Representative screenshots</h3>
+<p><img src = "https://s3.ap-northeast-2.amazonaws.com/kaist-cs492-livelight/screenshot_01.png" width = 500></p>
+<p><img src = "https://s3.ap-northeast-2.amazonaws.com/kaist-cs492-livelight/screenshot_02.png" width = 500></p>
+<p><img src = "https://s3.ap-northeast-2.amazonaws.com/kaist-cs492-livelight/screenshot_03.png" width = 500></p>
+<p><img src = "https://s3.ap-northeast-2.amazonaws.com/kaist-cs492-livelight/screenshot_04.png" width = 500></p>
+<h3 id="instructions">Instructions</h3>
+<p>In this interface, you are going to watch a live stream video. The type of the video is '1-man-playing-game'.</p>
+<p>While watching the video, there is a big blue <strong>Add Highlight</strong> Button at the right-bottom of the page. You can press this button when you feel something else while watching the video. This response is used for making immediate highlight.</p>
+<p>After system make this immediate highlight, they will be displayed in the bottom of the page. You can watch this highlight, add meta-data for the video.</p>
+<p>After livestream ends, entire highlight is generated. You can enjoy it here <a href="https://jiwoopark.proto.io/player/index.cfm?id=88a0f786-4913-49f3-8840-9eb9ce0a0281">LiveLight Prototype</a>.</p>
+<h2 id="user-feedback">User Feedback</h2>
+<ol style="list-style-type: decimal">
+<li>I think it is useless, why this for?</li>
+<li>For game video, I don't want highlight for game playing</li>
+<li>There is a similar functionalities in Afreeca, called &quot;꿀잼각&quot;</li>
+<li>Why it does not support pausing video?</li>
+<li>I don't know where to press the button.</li>
+<li>I don't like <strong>OVERWATCH</strong>. Hope that if there is another contents...</li>
+<li>It is more suitable for &quot;여캠&quot; - &quot;여캠&quot; is a genre of livestream videos where a sexy lady solely broadcast without any specific contents. Those streamers (who are usually called BJs) are just show their talking some chit-chats, pointless dancing, and acting coquettishly. Usually interesting moments are very sporadic during very long livestream. That's the reason why the lustful participant mentioned “여캠” as a better application for our project.</li>
+<li>Users press the highlight button carelessly.</li>
+<li>I wonder why people come to this site. Seeing videos on Youtube is more convenient to find many videos.</li>
+<li>Autogenerated highlights during the live stream are confusing.</li>
+</ol>
+</body>
+</html>
