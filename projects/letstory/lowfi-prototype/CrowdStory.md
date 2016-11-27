@@ -8,7 +8,7 @@ The problem we are trying to solve is a collaborative content creation using the
 
 ### Tasks: List core tasks (one to three, at least two recommended) you've decided to support in your application. Again, you can make improvements from the initial report.
 
- ![螢幕快照 2016-11-10 下午11.17.28](螢幕快照 2016-11-10 下午11.17.28.png)
+  ![task](task.png)
 
 ### Prototype on the Invision:
 
@@ -24,14 +24,16 @@ We did only implement “happy path”, no additional functions like, advanced a
 
 ### Representative screenshots: Include a few most important screenshots that showcase the uniqueness of your application.
 
- ![14976129_1220020678057653_59396855_o](/Users/Jean/Downloads/14976129_1220020678057653_59396855_o.jpg)
+  ![p1](p1.jpg)
 
- ![15060266_1220020684724319_136786041_o](15060266_1220020684724319_136786041_o.jpg)
+ ![p2](p2.jpg) 
 
- 
-
-![15053336_1220020691390985_1884308459_o](/Users/Jean/Downloads/15053336_1220020691390985_1884308459_o.jpg)
+ ![p3](p3.jpg)
 
 ### User feedback
 
- ![螢幕快照 2016-11-10 下午11.30.39](螢幕快照 2016-11-10 下午11.30.39.png) ![螢幕快照 2016-11-10 下午11.31.02](螢幕快照 2016-11-10 下午11.31.02.png) ![螢幕快照 2016-11-10 下午11.31.12](螢幕快照 2016-11-10 下午11.31.12.png)
+ ![f1](f1.png)
+
+ ![f2](f2.png)
+
+ ![f3](f3.png)
