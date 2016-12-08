@@ -62,3 +62,10 @@ https://docs.google.com/forms/d/e/1FAIpQLSfkA2ponNJynHKsKtt6gdvuacDDippesvO9Ozie
 - OpenIdeo
 - Innocentive
 
+
+# Collaborative programming (5 mins)
+- from in-class activity
+- tackling one of the central problems: synchronous editing in code might break the whole thing
+- Collabode
+
+
