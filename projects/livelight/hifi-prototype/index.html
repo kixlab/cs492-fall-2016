@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="milestone-6---high-fi-prototype">Milestone 6 - High-Fi Prototype</h1>
+<h2 id="project-summary">Project Summary</h2>
+<p>Generating highlights for live videos such as sports match, presidential debates etc. needs experts and also viewers might have to wait for some time in order to watch those highlights.</p>
+<p>We present LiveLight which uses every viewer's individual moments (moments they love) to generate highlights during the live stream.</p>
+<p>As far as we know, our proposed system is first of its kind that uses crowdsourcing for highlight generation. The unique feature of our system is that it processes crowd's moments during the live stream and generates highlights before the live stream ends.</p>
+<h2 id="instruction">Instruction</h2>
+<ol style="list-style-type: decimal">
+<li><p>At first all user must be signed up to use our system. <img src = "https://s3.ap-northeast-2.amazonaws.com/kaist-cs492-livelight/screenshot_06_01.png" width = 500></p></li>
+<li><p>After logged in, user can use our system. <img src = "https://s3.ap-northeast-2.amazonaws.com/kaist-cs492-livelight/screenshot_06_02.png" width = 500></p></li>
+<li>There are three main components in our interface.
+<ul>
+<li><strong>Video Player</strong>
+<ul>
+<li>Our video replays after every one hour.</li>
+</ul></li>
+<li><strong>&quot;Add This Moment!&quot; Button</strong>
+<ul>
+<li>User press this button when they found the interesting moment of the video.</li>
+<li>User can cancel their miss response by clicking <strong>undo button</strong> on the left.</li>
+</ul></li>
+<li><strong>List of Highlights</strong>
+<ul>
+<li>Dynamically generated highlights (by the system based on users clicked data) will be listed on the right side of the page.</li>
+</ul></li>
+</ul></li>
+</ol>
+<h2 id="technical-description">Technical Description</h2>
+<h3 id="frameworks">Frameworks</h3>
+<p>Livelight is implemented using <strong>node.js v6.6.0</strong> as a serverside framework and bootstrap <strong>Bootstrap v3.3.7</strong> as a front-end web page development.</p>
+<h3 id="libraries">Libraries</h3>
+<p>To make the system look better, we used <strong>Bootflat v2.0.4</strong> css skins along with BootStrap.</p>
+<p>The interaction between the server and client is done two ways: 1) Ajax(Asynchronous JavaScript and XML), 2) WebSocket. In order to handle Ajax Restful APIs on front-end, we used <strong>JQuery v3.1.1</strong>. In order to handle socket-based communication, we used <strong>socket.io v1.4.5</strong>.</p>
+<p>In order to show videos, we used <strong>video.js v4.3.0</strong>, and used extensions like <strong>videojs-markers v0.6.1</strong> and <strong>videojs.disableProgress</strong>. Also, we did customization on the css to make it more suitable for our purpose.</p>
+<p>For mongoDB ODM, we used <strong>mongoose v4.4</strong>.</p>
+<p>Also, we generate thumbnail images with <strong>html2canvas v0.5.0-beta3</strong>.</p>
+<p>Finally, the authentication of users is done with <strong>passport v0.1.18</strong>.</p>
+<h3 id="technical-stack">Technical Stack</h3>
+<p>The server is running on <strong>Heroku</strong>(https://www.heroku.com/), which is a platform-as-a-service(PaaS). We used hobby($7) sized instance for our system. As Heroku nicely supports scaling the system, we can handle the scalability issue pretty easily.</p>
+<p>mongoDB is running on <strong>mLab</strong>(https://mlab.com/), which is a mongoDB platform that hosts mongoDB.</p>
+<p>On top of above infrastructure, we run our node.js express server and bootstrap &amp; jQuery based front-end.</p>
+<h2 id="prototype-url">Prototype URL</h2>
+<p>You can use our prototype here: <a href="https://live-light.herokuapp.com"/>https://live-light.herokuapp.com/</a></p>
+<h2 id="prototype-code">Prototype Code</h2>
+<p>The repository of Livelight is available at <a href="https://gitlab.com/CS492/term_project.git">https://gitlab.com/CS492/term_project.git</a></p>
+
+</body>
+</html>

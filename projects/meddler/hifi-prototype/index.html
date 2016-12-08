@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="hi-fi-prototype">Hi-Fi Prototype</h1>
+<p>CS492 Crowdsourcing - Final Project: <strong>Milestone 06 (Hi-fi Prototype)</strong> (2016-12-06)</p>
+<ul>
+<li>20165192 Sunggeun Ahn (topmaze@kaist.ac.kr)</li>
+<li>20165161 Young-Min Baek (ymbaek@se.kaist.ac.kr)</li>
+<li>20163703 Sungjae Hong (yain@kaist.ac.kr)</li>
+</ul>
+<hr />
+<h2 id="project-summary">PROJECT SUMMARY</h2>
+<h3 id="a.-problem-statement">A. PROBLEM STATEMENT</h3>
+<ol style="list-style-type: decimal">
+<li><strong><em>&quot;We need to study any time and anywhere.&quot;</em></strong>
+<ul>
+<li>How can we enable learners to study easily in their daily lives?</li>
+</ul></li>
+<li><strong><em>&quot;We need to be motivated to learn.&quot;</em></strong>
+<ul>
+<li>How can we provide proper stimulation for learning?</li>
+</ul></li>
+<li><strong><em>&quot;We need newer and more diverse problems.&quot;</em></strong>
+<ul>
+<li>Where can we get a number of various problems?</li>
+</ul></li>
+</ol>
+<h3 id="b.-solution-1-day-n-questions-1dnq-odnq-description">B. SOLUTION: 1-Day-N-Questions (1DNQ, ODNQ) &amp; DESCRIPTION</h3>
+<div class="figure">
+<img src="images/figure1.png" width="800"/>
+
+</div>
+<p>The application which you will use through the prototype is called <strong><em>1-Day-N-Questions (1DNQ)</em></strong>, which is the crowdsourcing platform for the English learners, especially who want to be <em>stimulated to study</em>. My team thought about the way to let English learners to get inspired in English study, with the use of smart devices, which most of people daily hold on. For the inspiration task, we <em>got an idea from offline <strong>English study groups</strong></em>. Thus, 1DNQ let learners to be clusted into a study group, and to let group members to share learning experiences to other members by making quizzes through the application. Then the application stores and sends the questions to other members, letting them to solve and evaluate the questions. In addition, all these data is stored and analyzed to help the learners to check their own English skills.</p>
+<ul>
+<li>Why do we use crowdsourcing for the study group?
+<ul>
+<li>Crowds can effectively stimulate learners to study in a person-to-person way.</li>
+<li>Our ODNQ platform will serve <em>real name-based</em> card creation and care distribution.</li>
+</ul></li>
+<li>Our prototype consists of two subsystems: <strong>(1) ODNQ Android app, (2) ODNQ DB server</strong>
+<ul>
+<li><em>ODNQ Android app</em> performs (a) card creation, (b) card solving, (c) group management, (d) study review, (e) card management, (f) personal information management, (g) checking my achievements/records, (h) dashboard management, (i) card evaluation, (j) analysis of my achievement</li>
+<li><em>ODNQ DB server</em> performs (a) user DB management, (b) card DB management, (c) group DB management, (d) card-group relation DB management, (e) push message request, (f) card-distribution algorithm, (g) global settings</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="instruction">INSTRUCTION</h2>
+<h3 id="a.-interfaces-of-one-day-n-questions-focusing-on-android-app">A. INTERFACES OF One-Day-N-Questions (focusing on Android app)</h3>
+<p><strong><em>Main Dashboards</em></strong></p>
+<ul>
+<li>My Achievements</li>
+<li>Study Note</li>
+</ul>
+<p><strong><em>Card management</em></strong></p>
+<ul>
+<li>Card creation</li>
+<li>Starring card</li>
+<li>Card evaluation</li>
+</ul>
+<p><strong><em>Group management</em></strong></p>
+<ul>
+<li>Checking my group information</li>
+<li>Leave my existing group</li>
+<li>Make my new group</li>
+<li>Find and join a new group</li>
+</ul>
+<p><strong><em>Study Reviewing</em></strong></p>
+<ul>
+<li>Reviewing starred card</li>
+<li>Solving more word-cards</li>
+<li>Solving system-recommended word-cards</li>
+</ul>
+<h3 id="b.-instruction-a-for-task-1">B. INSTRUCTION-A for TASK 1</h3>
+<p><strong><em>Make a new word-card &amp; Add it to my word note &amp; Share the card with crowds</em></strong></p>
+<ul>
+<li><strong>Instruction</strong>
+<ul>
+<li>First task is to make a word note with an application. Broadly, the way to make a word note in the application resembles to the way to make a quiz to other people.</li>
+<li>At first, you should choose a type of an English vocabulary (in the prototype, it is fixed to &quot;WORD&quot;).</li>
+<li>Second, type a question on the application (in the prototype, it is fixed to &quot;IMMIGRATION&quot;).</li>
+<li>Third, type possible answers on the blank (in the prototype, sample answers are given by a prototype).</li>
+<li>Next, type possible tags which can characterize the word or the phrase in the question (in the prototype, sample tags are already given).</li>
+<li>Then, type hints if you want (in the prototype, same hints are already given).</li>
+<li>You need to also set the time limit of the question.</li>
+<li>At last, type &quot;OK&quot; button to finish the task.</li>
+<li>Although most of tasks are done automatically, please imagine that you are doing the task manually.</li>
+<li>Please do given instructions while you read any English textbook.</li>
+<li>You can give any kind of feedbacks from very small details such as a name of a button in the application, to a very broad concept.</li>
+<li>Do this task in 15 minutes.</li>
+</ul></li>
+<li><strong>Image-based prototype</strong>
+<ul>
+<li><a href="https://marvelapp.com/159c7g9">Marvel prototype link for Task 1</a></li>
+</ul></li>
+</ul>
+<h3 id="c.-instruction-b-for-task-2">C. INSTRUCTION-B for TASK 2</h3>
+<p><strong><em>Solve a question-card &amp; Check your achievements and study history</em></strong></p>
+<ul>
+<li><strong>Instruction</strong>
+<ul>
+<li>Second task is to solve a given question of the application, and evaluate it. A question is given to the users by a push alarm (In the prototype, no buzz or sound will be given to an alarm. There will be only a tab announcement with small icon on the upper sidebar).</li>
+<li>You should do this task while doing other works. When you get an alarm, you check the alarm and clicking the alarm will let you get into the application automatically.</li>
+<li>When you get into the quiz, you can type a possible answer of the quiz. You have to solve the question in limited time suggested, then click check button to see an answer (In the prototype, answer will be automatically given).</li>
+<li>After see the answer, you should check whether you are right or wrong, and click right or wrong button according to your answer status (In the prototype, as wrong answer was given, you should check &quot;wrong&quot; button).</li>
+<li>After solving a question and checking rightness, you can</li>
+<li>Push &quot;QUIT&quot; button to end the application, or</li>
+<li>Push &quot;Goto 1DNQ App&quot; button to check study status of yourself. In this menu you can check:
+<ul>
+<li>Your study records, including a list of English vocabulary you learned through the application and your English skill status on each type of vocabulary, by using MyStudy menu</li>
+<li>Control study groups you are now in, by using Study group menu, or</li>
+<li>You can quit the application using the sign out button</li>
+</ul></li>
+<li>In prototype, you can get a push alarm after quit the application and be in background screen. Thus, after using the application, please push QUIT or sign out button to end the application.</li>
+</ul></li>
+<li><strong>Image-based prototype</strong>
+<ul>
+<li><a href="https://marvelapp.com/125i8fc">Marvel prototype link for Task 2</a></li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="technical-description">TECHNICAL DESCRIPTION</h2>
+<h3 id="a.-system-architecture-technical-stack">A. SYSTEM ARCHITECTURE (+ TECHNICAL STACK)</h3>
+<div class="figure">
+<img src="images/architecture.png" />
+
+</div>
+<h3 id="b.-utilized-library">B. UTILIZED LIBRARY</h3>
+<ol style="list-style-type: decimal">
+<li><em>Firebase cloud server</em>
+<ul>
+<li>Official webpage: <a href="https://firebase.google.com/?hl=ko">Firebase by Google</a></li>
+<li>Officail cloud service represented with Google</li>
+<li>Firebase Cloud Messaging (FCM): used for push notification</li>
+</ul></li>
+<li><em>GraphView library</em>
+<ul>
+<li>Official webpage: <a href="http://www.android-graphview.org/">Android-GraphView</a></li>
+<li>Graph widget library for android: used for achievement graph</li>
+<li>Interactive feature with touch listener</li>
+</ul></li>
+</ol>
+<h3 id="c.-database-design">C. DATABASE DESIGN</h3>
+<h4 id="server-database">(1) Server Database</h4>
+<div class="figure">
+<img src="images/figure2-A.png" />
+
+</div>
+<h4 id="local-database">(2) Local Database</h4>
+<div class="figure">
+<img src="images/figure2-B.png" />
+
+</div>
+<hr />
+<h2 id="prototype">PROTOTYPE</h2>
+<h3 id="implementation-progress">IMPLEMENTATION PROGRESS</h3>
+<ul>
+<li><strong>ODNQ Android app implementation (Manager: Young-Min Baek)</strong>
+<ul>
+<li>[IMPLEMENTED] Register a new user</li>
+<li>[IMPLEMENTED] Store the user information into local DB</li>
+<li>[IMPLEMENTED] Make a new card</li>
+<li>[IMPLEMENTED] Store the created new card into local DB &amp; server DB (Server PHP request)</li>
+<li>[NOT SUPPORTED] Make a new group</li>
+<li>[NOT SUPPORTED] Join &amp; leave one of my group</li>
+<li>[IMPLEMENTED] Receive a push message from server</li>
+<li>[IMPLEMENTED] Parse word-card information from the push message</li>
+<li>[NOT YET] Show user's achievement dashboard</li>
+<li>[NOT YET] Show user's own registered group list &amp; group information</li>
+</ul></li>
+<li><strong>ODNQ server implementation (Manager: Sungjae Hong)</strong>
+<ul>
+<li>[IMPLEMENTED] Store the user information</li>
+<li>[IN PROGRESS] Read the user information using several keys</li>
+<li>[IMPLEMENTED] Store the group information</li>
+<li>[IN PROGRESS] Read the group information using several keys</li>
+<li>[IMPLEMENTED] Store the card information</li>
+<li>[IN PROGRESS] Store the card information</li>
+<li>Send a push message through</li>
+</ul></li>
+<li><strong>ODNQ communication implementation (Manager: Sunggeun Ahn)</strong>
+<ul>
+<li>[IMPLEMENTED] Firebase connection</li>
+<li>[IMPLEMENTED] Send push messages through Firebase</li>
+<li>[IMPLEMENTED] Read/Interprete card data from push messages</li>
+</ul></li>
+</ul>
+<h3 id="github-repositories">Github REPOSITORIES</h3>
+<ul>
+<li>Prototype URL is replaced by prototype screenshots below.
+<ul>
+<li>[Github] <strong><em>ODNQ Android App</em></strong>: <a href="https://github.com/KAIST-CS492A-Meddler/1DNQ">Github repo link of KAIST-CS492A-Meddler/1DNQ</a></li>
+<li>[Github] <strong><em>ODNQ MySQL PHP Server</em></strong>: <a href="https://github.com/KAIST-CS492A-Meddler/ODNQ_Server">Github repo link of KAIST-CS492A-Meddler/1DNQ_Server</a></li>
+</ul></li>
+</ul>
+<h3 id="screenshots">SCREENSHOTS</h3>
+<p><img src="images/scr01.png" /> <img src="images/scr02.png" /> <img src="images/scr03.png" /> <img src="images/scr04.png" /> <img src="images/scr05.png" /> <img src="images/scr06.png" /> <img src="images/scr07.png" /> <img src="images/scr08.png" /> <img src="images/scr09.png" /></p>
+</body>
+</html>
