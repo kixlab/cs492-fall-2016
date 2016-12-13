@@ -44,3 +44,13 @@ Project overview / Assignment 2 discussion took more time than I thought.
 A bit too high-level
 - make clear why programming paradigms and what implications it has
 
+
+===
+
+connect to old punch card => realtime debugging metaphor
+
+crowdsourcing is hard to debug
+- bug is difficult to replicate (even costs money)
+- nondeterministic?
+- cycle takes too much time to run
+=> time (make it realtime), 
