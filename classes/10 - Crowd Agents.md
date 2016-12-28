@@ -46,7 +46,22 @@ Johnny Cash Project
 The drawing game reflection + design activity worked quite well
 - students have experienced the game themselves, so their comments were more to the point and concretely useful.
 
+Activity Discussion: how to improve the system?
+
+voting
+layer based
+dedicated areas
+less anonymous
+—
+after the design activity
+- reputation + realtime
+- locking, even automated
+- survival vote every 10 seconds
+- limited ink
+- event-based voting
+
 Crowd agent intro felt quite strong.
+
 
 ===
 

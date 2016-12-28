@@ -20,3 +20,13 @@
 # Student Presentation 30 mins
 
 # Announcement
+
+===
+
+# Notes
+
+Sang-gyun's activity was quite fun
+- showing Turker groups (with gaming behaviors) on Facebook
+- cool and fun example
+
+Another idea: show actual Turker forums and posts.

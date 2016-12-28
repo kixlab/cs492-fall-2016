@@ -1,11 +1,5 @@
 # 01 - Intro
 
-Reflections
-- course admin planning takes time
-- pace was too fast: give more time between topic transitions
-- 
-
-===
 
 Course staff intro
 ⁃ instructor
